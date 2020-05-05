@@ -12,6 +12,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Dissertate}[2014/03/25 v2.0 Dissertate Class]
 \LoadClass[12pt, oneside, letterpaper]{book}
+% \RequirePackage[fontsize=14pt]{scrextend}
 
 %
 % Options
