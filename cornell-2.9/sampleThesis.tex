@@ -23,6 +23,10 @@
 \usepackage{ebgaramond-maths}
 \usepackage[fontsize=12pt]{scrextend}
 \usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  linktoc=all
+}
 
 %if you're having problems with overfull boxes, you may need to increase
 %the tolerance to 9999
@@ -55,21 +59,27 @@ your biosketch page may not be roman numeral iii, as required by the
 graduate school.
 \end{abstract}
 
+\phantomsection % Required for correct hyperlink
 \begin{biosketch}
 Your biosketch goes here. Make sure it sits inside
 the brackets.
 \end{biosketch}
 
+\phantomsection
 \begin{dedication}
 This document is dedicated to all Cornell graduate students.
 \end{dedication}
 
+\phantomsection
 \begin{acknowledgements}
 Your acknowledgements go here. Make sure it sits inside the brackets.
 \end{acknowledgements}
 
+\phantomsection
 \contentspage
+\phantomsection
 \tablelistpage
+\phantomsection
 \figurelistpage
 
 \normalspacing \setcounter{page}{1} \pagenumbering{arabic}
