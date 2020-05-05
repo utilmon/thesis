@@ -11,4 +11,5 @@
 - https://gradschool.cornell.edu/academic-progress/thesis-dissertation/writing-your-thesis-dissertation/formatting-requirements/
 - https://gradschool.cornell.edu/academic-progress/thesis-dissertation/
 
-
+## Dissertate
+- https://github.com/suchow/Dissertate
