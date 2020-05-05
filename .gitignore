@@ -9,6 +9,11 @@
 *.toc
 *.pdf
 
+*.bbl
+*.blg
+*.fdb_latexmk
+*.gz
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
