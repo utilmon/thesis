@@ -7,11 +7,13 @@
 \usepackage{subfigure}
 \usepackage{hangcaption}
 \usepackage{txfonts}
-%\usepackage{palatino}
+\usepackage{palatino}
 %\usepackage{ebgaramond}
-\usepackage{ebgaramond-maths}
-\usepackage[fontsize=12pt]{scrextend}
-\usepackage[Bjornstrup]{fncychap}
+%\usepackage{ebgaramond-maths}
+%\usepackage[fontsize=12pt]{scrextend}
+\usepackage{multirow,makecell,booktabs}
+\usepackage{enumitem}
+\usepackage[Conny]{fncychap} %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage{hyperref} % hyperref should come last
 \hypersetup{
   hidelinks,
@@ -22,7 +24,8 @@
 %the tolerance to 9999
 \tolerance=9999
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
+%\bibliographystyle{plain}
 %\bibliographystyle{IEEEbib}
 
 \renewcommand{\caption}[1]{\singlespacing\hangcaption{#1}\normalspacing}
