@@ -1,30 +1,33 @@
-\chapter{Boltzmann}
+\chapter{Brightness of femtosecond nonequilibrium photoemission in metallic photocathodes at wavelengths near the photoemission threshold}
+
+This chapter was originally published as Ref.~\cite{bae2018_BrightnessFemtosecondNonequilibrium}.
+
 \section{Abstract}
 The operation of photoemission electron sources with wavelengths near the photoemission threshold has been shown to dramatically decrease the minimum achievable photocathode emittance, but at the cost of significantly reduced quantum efficiency (QE). In this work, we show that for femtosecond laser and electron pulses, the increase in required laser intensities due to the low QE drives the photocathode electronic distribution far from static equilibrium. We adapt an existing dynamic model of the electron occupation under high intensity laser illumination to predict the time-dependent effects of the nonequilibrium electron distribution on the QE, mean transverse energy (MTE), and emission brightness of metal phtocathodes. We find that multiphoton photoemission dramatically alters the MTE as compared to thermal equilibrium models, causing the MTE to no longer be a monotonic function of photon excess energy. 
 
 \section{Introduction}
-Ultrafast  electron pulses generated from photocathode sources play a critical role in probing time-resolved ultrafast dynamics, in applications ranging from free electron lasers\cite{fel} to ultrafast electron diffraction\cite{ued} and microscopy.\cite{uem} For each of these cases, the critical figure of merit is the 5D beam brightness. In a linear accelerator, the beam brightness is never larger than it is at the photoemission source, and is thus given by:\cite{Rhee1992,ttm,pancake}
+Ultrafast  electron pulses generated from photocathode sources play a critical role in probing time-resolved ultrafast dynamics, in applications ranging from free electron lasers \cite{fel} to ultrafast electron diffraction \cite{ued} and microscopy \cite{uem}. For each of these cases, the critical figure of merit is the 5D beam brightness. In a linear accelerator, the beam brightness is never larger than it is at the photoemission source, and is thus given by \cite{Rhee1992,ttm,pancake}:
 \begin{equation}\label{eq_brightness}
 	\mathcal{B}_{5D, max} \equiv \frac{1}{16 \pi^2} \frac{I}{\epsilon_x \epsilon_y} = \frac{1}{16 \pi^2} \frac{I m_e c^2}{\sigma_x \sigma_y \textrm{MTE}} 
 \end{equation}
-where $I$ is the peak current from the cathode, $\epsilon_{x,y}$ is the normalized emittance of the beam, $\sigma_{x,y}$ is the rms laser spot size, $m_e c^2$ is the electron rest energy, and MTE is the mean transverse energy of the photoelectrons at the photocathode.\cite{Musumeci2018} The laser spot size is primarily determined by the space charge beam dynamics after photoemission. The MTE is determined by material properties that affect the photoemission process inside the photocathode, the cathode surface, and the photoemission drive laser properties.
+where $I$ is the peak current from the cathode, $\epsilon_{x,y}$ is the normalized emittance of the beam, $\sigma_{x,y}$ is the rms laser spot size, $m_e c^2$ is the electron rest energy, and MTE is the mean transverse energy of the photoelectrons at the photocathode \cite{Musumeci2018}. The laser spot size is primarily determined by the space charge beam dynamics after photoemission. The MTE is determined by material properties that affect the photoemission process inside the photocathode, the cathode surface, and the photoemission drive laser properties.
 
 
 %Since MTE stems from the excess energy of electrons in the emission process, it has long been considered in the photocathode community that operating at the effective work function photon energy ($h\nu \approx \phi_{eff}$) is optimal to minimize MTE.\cite{Hauri2010}
 
 %Equation~\ref{brightness} suggests that beam brightness is essentially determined by MTE, which originates from the excess energy of electrons in the emission process. Hence, in the photocathode community, it has long been considered that operating at effective work function photon energy is optimal to minimize MTE.\cite{Hauri2010}
 
-Dowell and Schmerge demonstrated that Spicer's three-step photoemission model\cite{spicer} can be utilized to derive expressions for the photoemission quantum efficiency (QE) and MTE of metal photocathodes.\cite{dowell2009_QuantumEfficiencyThermal} While this was originally derived under the assumption of a free electron Fermi gas and a flat density of states at zero temperature,  recent studies have extended this approach to account for a realistic density of states and non-zero (but constant) electronic temperature ($T_e$). \cite{Dimitrov2017,Feng2015} These models predict that as the photon energy ($h\nu$) approaches the work function ($\phi$), MTE converges to the thermal energy of electrons (MTE $\approx k_B T_e$). For a photon energy well above the threshold ($h\nu - \phi \gg 0$), the MTE is linear in the photon excess energy, MTE $ \approx (h\nu-\phi)/3$. Both behaviors have been demonstrated experimentally.\cite{Feng2015}  These studies predict that MTE is minimized by operating with very low photon excess energy, but do not account for dynamic or intensity dependent effects, such as multiphoton excitation or laser-induced ultrafast electron heating.
+Dowell and Schmerge demonstrated that Spicer's three-step photoemission model \cite{spicer1964} can be utilized to derive expressions for the photoemission quantum efficiency (QE) and MTE of metal photocathodes \cite{dowell2009_QuantumEfficiencyThermal}. While this was originally derived under the assumption of a free electron Fermi gas and a flat density of states at zero temperature,  recent studies have extended this approach to account for a realistic density of states and non-zero (but constant) electronic temperature ($T_e$) \cite{Dimitrov2017,Feng2015}. These models predict that as the photon energy ($h\nu$) approaches the work function ($\phi$), MTE converges to the thermal energy of electrons (MTE $\approx k_B T_e$). For a photon energy well above the threshold ($h\nu - \phi \gg 0$), the MTE is linear in the photon excess energy, MTE $ \approx (h\nu-\phi)/3$. Both behaviors have been demonstrated experimentally \cite{Feng2015}.  These studies predict that MTE is minimized by operating with very low photon excess energy, but do not account for dynamic or intensity dependent effects, such as multiphoton excitation or laser-induced ultrafast electron heating.
 
 %In case of copper, such assumptions hold when laser intensity is low\cite{multiphoton_musumeci,Ferrini2009} ($\lesssim 1 \text{ MW/cm}^2$) and pulse duration is longer than the electron thermalization timescale (100 fs).\cite{ttm}
 
-Metallic photocathodes, and in particularly copper photocathodes, are popular choices for ultrafast electron sources due to their prompt response time ($<50$ fs) and moderate vacuum requirements.\cite{ttm,plasmon} However, compared to semiconducting emitters, they suffer from several orders of magnitude less QE, due to frequent electron-electron scattering  during the transport of the excited population from the bulk to the surface. Thus, metallic photocathodes can demand a very high laser intensity   ($\textrm{10s of GW/cm}^2$) for femtosecond emission cases, for example in the blowout regime\cite{blowout} of high charge photoinjectors.
+Metallic photocathodes, and in particularly copper photocathodes, are popular choices for ultrafast electron sources due to their prompt response time ($<50$ fs) and moderate vacuum requirements \cite{ttm,plasmon}. However, compared to semiconducting emitters, they suffer from several orders of magnitude less QE, due to frequent electron-electron scattering  during the transport of the excited population from the bulk to the surface. Thus, metallic photocathodes can demand a very high laser intensity   ($\textrm{10s of GW/cm}^2$) for femtosecond emission cases, for example in the blowout regime \cite{blowout} of high charge photoinjectors.
 
-It has long been known that under high fluence, short pulse laser irradiation, the electronic temperature of the illuminated material can reach several thousand Kelvin for several picoseconds, while the lattice remains relatively cold.\cite{Anisimov1974,Fann1993,Elsayed-Ali1987} It was recently pointed out that this effect can drive up the minimum achievable photoemission MTE, and was calculated by using the traditional two temperature model coupled with the extended Dowell-Schmerge photoemission relations.\cite{ttm} Two temperature models naturally assume the underlying electronic distribution remains approximately thermalized, which may not be the case for femtosecond duration illumination. Furthermore, there have been experimental efforts which highlight the importance of multiphoton and heating effects on intense femtosecond photoemission.\cite{Pasmans2016,An2018,Bartoli1997}
+It has long been known that under high fluence, short pulse laser irradiation, the electronic temperature of the illuminated material can reach several thousand Kelvin for several picoseconds, while the lattice remains relatively cold \cite{Anisimov1974,Fann1993,Elsayed-Ali1987}. It was recently pointed out that this effect can drive up the minimum achievable photoemission MTE, and was calculated by using the traditional two temperature model coupled with the extended Dowell-Schmerge photoemission relations \cite{ttm}. Two temperature models naturally assume the underlying electronic distribution remains approximately thermalized, which may not be the case for femtosecond duration illumination. Furthermore, there have been experimental efforts which highlight the importance of multiphoton and heating effects on intense femtosecond photoemission \cite{Pasmans2016,An2018,Bartoli1997}.
 
-Femtosecond dynamics of photoexcited electrons in copper has been studied experimentally by time-resolved photoemission spectroscopy.\cite{Petek1999,Cao1997,Wolf1997}
-For theoretical understanding and predictions, Rethfeld \textit{et al.} suggested using the Boltzmann equation for nonequilibrium thermodynamics of metals irradiated by high laser fluence.\cite{rethfeld,boltzmann,skin}
-It was shown that this approach also allows simulating dynamic effects of photoemission, such as the image-charge driven reduction of the work function via a time dependent space charge field.\cite{rethfeld_schottky}
+Femtosecond dynamics of photoexcited electrons in copper has been studied experimentally by time-resolved photoemission spectroscopy \cite{Petek1999,Cao1997,Wolf1997}.
+For theoretical understanding and predictions, Rethfeld \textit{et al.} suggested using the Boltzmann equation for nonequilibrium thermodynamics of metals irradiated by high laser fluence \cite{rethfeld,boltzmann,skin}.
+It was shown that this approach also allows simulating dynamic effects of photoemission, such as the image-charge driven reduction of the work function via a time dependent space charge field \cite{rethfeld_schottky}.
 In this paper, we extend the Rethfeld approach to calculate key brightness parameters (QE and MTE) of a photocathode under high fluence ($\sim 1 \textrm{ mJ/cm}^2$) laser irradiation for femtosecond electron pulse applications. The model has the capability to account for femtosecond nonequilibrium thermodynamics, multiphoton absorption, and a realistic density of states. 
 
 
@@ -46,9 +49,9 @@ Before photons arrive at the cathode, the initial electronic occupation function
 	\frac{d f(\vec{k},t)}{d t} = \frac{\partial f(\vec{k},t)}{\partial t}\biggr|_{el-el} +  \frac{\partial f(\vec{k},t)}{\partial t}\biggr|_{photon\: absorb}
 	\label{bolt}
 \end{equation}
-where the first and second terms represent the occupation function change due to electron-electron collisions and photon absorption respectively. Here and throughout we have neglected the effects of electron-phonon interactions due to the very short timescale ($\leq 100$ fs) of the laser pulses considered. Furthermore, thermal conductivity and all spatial variation of the laser intensity is ignored, which is valid only for the case of homogeneous thin film photocathodes.\cite{boltzmann}
+where the first and second terms represent the occupation function change due to electron-electron collisions and photon absorption respectively. Here and throughout we have neglected the effects of electron-phonon interactions due to the very short timescale ($\leq 100$ fs) of the laser pulses considered. Furthermore, thermal conductivity and all spatial variation of the laser intensity is ignored, which is valid only for the case of homogeneous thin film photocathodes \cite{boltzmann}.
 
-Whereas the photon absorption term in Eq.~\ref{bolt} drives the distribution away from thermal equilibrium, the electron-electron scattering term regulates the thermalization timescale. As in Ref.~\cite{boltzmann}, the electron-electron scattering term is calculated based on the Coulomb interaction of two electrons that obey energy conservation ($\Delta E = E_2 - E_1 = E_3 - E$) and momentum conservation ($\Delta \vec{k} = \vec{k_2} - \vec{k_1} = \vec{k_3} - \vec{k}$).\cite{rethfeld,boltzmann} Here, $\vec{k}, \vec{k_2}$ are initial wave vectors, and $\vec{k_1}, \vec{k_3}$ are final wave vectors of the two interacting electrons. Assuming an isotropic system, the Fourier transform of the screened Coulomb potential $V_{ee}(r) = \frac{e^2}{4 \pi \epsilon_0}\frac{1}{r}e^{-\kappa r}$ yields:\cite{Ashcroft1978,rethfeld}
+Whereas the photon absorption term in Eq.~\ref{bolt} drives the distribution away from thermal equilibrium, the electron-electron scattering term regulates the thermalization timescale. As in Ref.~\cite{boltzmann}, the electron-electron scattering term is calculated based on the Coulomb interaction of two electrons that obey energy conservation ($\Delta E = E_2 - E_1 = E_3 - E$) and momentum conservation ($\Delta \vec{k} = \vec{k_2} - \vec{k_1} = \vec{k_3} - \vec{k}$).\cite{rethfeld,boltzmann} Here, $\vec{k}, \vec{k_2}$ are initial wave vectors, and $\vec{k_1}, \vec{k_3}$ are final wave vectors of the two interacting electrons. Assuming an isotropic system, the Fourier transform of the screened Coulomb potential $V_{ee}(r) = \frac{e^2}{4 \pi \epsilon_0}\frac{1}{r}e^{-\kappa r}$ yields \cite{Ashcroft1978,rethfeld}:
 \begin{equation}\label{eq_m}
 	|M_{ee}(\Delta k,\kappa)|^2 = \Big(\frac{e^2}{\epsilon_0 \Omega}\frac{1}{|\Delta k|^2 + \kappa^2}\Big)^2
 \end{equation}
@@ -56,11 +59,11 @@ where $\Omega$ is the unit cell volume, and
 \begin{equation}
 	\kappa^2 (t) = \frac{e^2}{\epsilon_0}\int_0^\infty dE D(E) \frac{df(E,t)}{dE}
 \end{equation}
-is the screening parameter with $D(E)$ as the density of state per volume for copper.\cite{Lin2008} The density of states is assumed to be flat for energy 6 eV above the Fermi level. Then, due to Fermi's golden rule, the change in the occupation due to electron-electron collision processes is given by:\cite{boltzmann,rethfeld}
+is the screening parameter with $D(E)$ as the density of state per volume for copper.\cite{Lin2008} The density of states is assumed to be flat for energy 6 eV above the Fermi level. Then, due to Fermi's golden rule, the change in the occupation due to electron-electron collision processes is given by \cite{boltzmann,rethfeld}:
 \begin{equation}\label{eq_ee}
 	\frac{\partial f(\vec{k})}{\partial t}\biggr|_{el-el} = \frac{2 \pi}{\hbar}\sum_{\vec{k_1}}\sum_{\vec{k_3}} |M_{ee}|^2 \mathcal{F} \delta(E_i-E_f).
 \end{equation}
-Here, $\delta(E_i-E_f)$ ensures the energy conservation between the initial ($E_i = E + E_2$) and final energy ($E_f = E_1 + E_3$), and $\mathcal{F}$ is the Pauli exclusion principle term expressed with occupation functions, $f_i \equiv f(k_i)$:\cite{rethfeld,boltzmann,skin}
+Here, $\delta(E_i-E_f)$ ensures the energy conservation between the initial ($E_i = E + E_2$) and final energy ($E_f = E_1 + E_3$), and $\mathcal{F}$ is the Pauli exclusion principle term expressed with occupation functions, $f_i \equiv f(k_i)$ \cite{rethfeld,boltzmann,skin}:
 \begin{equation}
 	\mathcal{F} = f_1 f_3 (1-f)(1-f_2) - f f_2(1-f_1)(1-f_3).
 \end{equation}
@@ -70,11 +73,11 @@ In this work, we further assume the system to be described by an isotropic singl
 \end{equation} 
 Consequently, Eq.~\ref{eq_ee} can be further simplified as in Ref. \cite{boltzmann}.
 
-The effective one band assumption requires a mediating body to conserve momentum upon photon absorption.  Here the inverse bremsstrahlung model is used: quasifree electrons absorb photons mediated by Coulomb potential from an ion.\cite{Delone1993,rethfeld} Here, the electron mass is negligible compared to the ion mass. Therefore, the momentum conservation holds for an arbitrary final momentum ($\vec{k} + \Delta \vec{k} =\vec{k_f}$) while there is no energy transfer to the ion ($E = E_f$). The Coulomb interaction between an electron and ion has mathematically identical expression to Eq.~\ref{eq_m}. Additionally, the interaction between the electron and photon introduces a Bessel function term, $J_\ell^2(e\vec{E_L}\cdot \Delta \vec{k}/m_e \omega_L^2)$, multiplied to the Coulomb potential term where $\ell$ is the number of photons absorbed, $\omega_L$ is the angular frequency of the laser light, and $\vec{E_L}$ is the electric field from the photons.\cite{Seely1973} Hence, the Fermi's golden rule is given by:
+The effective one band assumption requires a mediating body to conserve momentum upon photon absorption.  Here the inverse bremsstrahlung model is used: quasifree electrons absorb photons mediated by Coulomb potential from an ion \cite{Delone1993,rethfeld}. Here, the electron mass is negligible compared to the ion mass. Therefore, the momentum conservation holds for an arbitrary final momentum ($\vec{k} + \Delta \vec{k} =\vec{k_f}$) while there is no energy transfer to the ion ($E = E_f$). The Coulomb interaction between an electron and ion has mathematically identical expression to Eq.~\ref{eq_m}. Additionally, the interaction between the electron and photon introduces a Bessel function term, $J_\ell^2(e\vec{E_L}\cdot \Delta \vec{k}/m_e \omega_L^2)$, multiplied to the Coulomb potential term where $\ell$ is the number of photons absorbed, $\omega_L$ is the angular frequency of the laser light, and $\vec{E_L}$ is the electric field from the photons \cite{Seely1973}. Hence, the Fermi's golden rule is given by:
 \begin{equation}\label{eq_absorb}
 	\frac{\partial f(\vec{k})}{\partial t}\biggr|_{photon\: absorb} = \frac{2\pi}{\hbar}\sum_{\Delta\vec{k}}\sum_\ell |M_{ee}|^2 J_\ell^2 \mathcal{F} \delta(E-E_f)
 \end{equation}
-where $\mathcal{F}$ is again the Pauli exclusion principle term:\cite{rethfeld,boltzmann}
+where $\mathcal{F}$ is again the Pauli exclusion principle term \cite{rethfeld,boltzmann}:
 \begin{equation}
 	\mathcal{F} = f(k_f)(1-f(k))-f(k)(1-f(k_f)).
 \end{equation}
@@ -85,13 +88,13 @@ To investigate the dynamics of electron energy distribution of copper during and
 \begin{equation} \label{eq_quailog}
 	\Phi[f(E,t)] \equiv -\ln[1/f(E,t)-1].
 \end{equation}
-Under this transformation, a Fermi-Dirac distribution has a linear relation with energy where its slope is inversely proportional to the temperature. Note that nonlinearity in energy indicates nonequilibrium behavior. In Fig.~\ref{fig_occupation}, a quasilogarithmic transformation of the occupation functions of copper under 50 fs laser irradiation is plotted for two different absorbed fluences at four different time positions (0 fs, 10 fs, 50 fs, and 100 fs from the beginning of the laser irradiation). The initial distribution demonstrates a perfect linear relation in thermal equilibrium of 300 K whereas the occupation functions during the laser irradiation ($0<t \leq 50$ fs) show strong nonlinearity due to nonequilibrium dynamics. At 100 fs, the high fluence irradiated electrons approach another thermal equilibrium of $\sim$3500 K while the low fluence irradiated electrons are still far from thermalization. It was reported that a smaller fluence irradiation tends to have a longer thermalization timescale up to several hundred femtoseconds.\cite{boltzmann}
+Under this transformation, a Fermi-Dirac distribution has a linear relation with energy where its slope is inversely proportional to the temperature. Note that nonlinearity in energy indicates nonequilibrium behavior. In Fig.~\ref{fig_occupation}, a quasilogarithmic transformation of the occupation functions of copper under 50 fs laser irradiation is plotted for two different absorbed fluences at four different time positions (0 fs, 10 fs, 50 fs, and 100 fs from the beginning of the laser irradiation). The initial distribution demonstrates a perfect linear relation in thermal equilibrium of 300 K whereas the occupation functions during the laser irradiation ($0<t \leq 50$ fs) show strong nonlinearity due to nonequilibrium dynamics. At 100 fs, the high fluence irradiated electrons approach another thermal equilibrium of $\sim$3500 K while the low fluence irradiated electrons are still far from thermalization. It was reported that a smaller fluence irradiation tends to have a longer thermalization timescale up to several hundred femtoseconds \cite{boltzmann}.
 %The energy resolution of 62 meV is used throughout the calculations.
 
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=250pt]{figs/boltzmann/occupation.eps}
+	\includegraphics*[width=300pt]{figs/boltzmann/occupation.eps}
 	\caption{Quasilogarithmic transformation of electron energy distribution $\Phi[f(E,t)]$ of copper over time (Eq.~\ref{eq_quailog}).  Under 50 fs laser irradiation, the work function photon energy of 4.31 eV was used with two different laser intensities that results in 1 mJ/cm$^2$ (blue) and $10^{-5} \textrm{ mJ/cm}^2$ (red) absorbed fluences. The transient distributions are plotted at $t=$ 0 fs (black solid line), 10 fs (dotted lines), 50 fs (dashed lines), and 100 fs (colored solid lines).}
 	\label{fig_occupation}
 	%   \vspace*{-\baselineskip}
@@ -114,7 +117,7 @@ Then,  the total number of escaped electrons per unit area can be derived by int
 
 %with $\cos \theta_E = \sqrt{(E_F + \phi)/E}$.
 
-Although it may be intuitive to calculate the number of photons in each pulse based on the input parameters from Eq.~\ref{eq_absorb}, it was shown that inverse bremsstrahlung process, which accounts only intraband absorption, does not produce the correct optical skin depth of the material.\cite{skin} The discrepancy can be up to a factor of 2 for the range of photon energy used in our work. Therefore, instead of using the input parameters, the number of absorbed photons is calculated \emph{post-facto} based on the change of internal energy for unit volume, $\Delta E$:
+Although it may be intuitive to calculate the number of photons in each pulse based on the input parameters from Eq.~\ref{eq_absorb}, it was shown that inverse bremsstrahlung process, which accounts only intraband absorption, does not produce the correct optical skin depth of the material \cite{skin}. The discrepancy can be up to a factor of 2 for the range of photon energy used in our work. Therefore, instead of using the input parameters, the number of absorbed photons is calculated \emph{post-facto} based on the change of internal energy for unit volume, $\Delta E$:
 
 	\begin{equation}\label{eq_Nph}
 		N_{ph} = \frac{d_s \Delta E}{ \hbar \omega_L} = \frac{d_{s}}{\hbar \omega_L} \int_0^\infty dE \: D(E) [f(E,t)-f(E,0)] E.
@@ -124,7 +127,7 @@ Here, the optical skin depth, $d_s$ = 13 nm,\cite{CuRefl} is multiplied to calcu
 \begin{equation}\label{eq_qe}
 	\textrm{QE} = N_e (1-R) / N_{ph}
 \end{equation}
-where $R$ is the reflectivity of copper.\cite{CuRefl}
+where $R$ is the reflectivity of copper \cite{CuRefl}.
 
 MTE is the averaged transverse energy ($(p \sin\theta)^2/2m_e$) of electrons above the vacuum level. As in the Dowell-Schmerge model,  we assume no effects of the electron effective mass on the MTE, and thus  set $p^2/2m_e = E$. Similar to Eq.~\ref{eq_Ne}, we get MTE by integrating over time, energy, and allowed angle:
 
@@ -140,23 +143,23 @@ Due to discretization of the energy distribution, the uncertainty of calculated 
 \begin{figure}[h!]
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=250pt]{figs/boltzmann/low.eps}
-	\caption{(a) QE calculated based on Eq.~\ref{eq_qe} in single photon absorption dominant regime ($10^{-5} \textrm{ mJ/cm}^2$ absorbed fluence), compared to experimentally measured values.\cite{Dowell2006} (b)  MTE computed by Eq.~\ref{eq_mte} as a function of excess photon energy ($h\nu - \phi$) for $10^{-5} \textrm{ mJ/cm}^2$ absorbed fluence. The dashed line represents the thermal energy. The dash-dotted line is a linear relation predicted and confirmed in earlier works.\cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017}}
+	\includegraphics*[width=280pt]{figs/boltzmann/low.eps}
+	\caption{(a) QE calculated based on Eq.~\ref{eq_qe} in single photon absorption dominant regime ($10^{-5} \textrm{ mJ/cm}^2$ absorbed fluence), compared to experimentally measured values \cite{Dowell2006}. (b)  MTE computed by Eq.~\ref{eq_mte} as a function of excess photon energy ($h\nu - \phi$) for $10^{-5} \textrm{ mJ/cm}^2$ absorbed fluence. The dashed line represents the thermal energy. The dash-dotted line is a linear relation predicted and confirmed in earlier works \cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017}.}
 	\label{fig_low}
 	%   \vspace*{-\baselineskip}
 \end{figure}
 
-We first set the absorbed laser fluence down to single-photon absorption dominant regime ($10^{-5} \textrm{ mJ/cm}^2$) to compare with experimentally measured QE \cite{Dowell2006} and earlier predictions on MTE.\cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017} For a pulse length of 50 fs, the QE and MTE for a copper photocathode with a realistic density of states are plotted in Fig.~\ref{fig_low} based on Eq.~\ref{eq_qe} and Eq.~\ref{eq_mte}.
+We first set the absorbed laser fluence down to single-photon absorption dominant regime ($10^{-5} \textrm{ mJ/cm}^2$) to compare with experimentally measured QE \cite{Dowell2006} and earlier predictions on MTE \cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017}. For a pulse length of 50 fs, the QE and MTE for a copper photocathode with a realistic density of states are plotted in Fig.~\ref{fig_low} based on Eq.~\ref{eq_qe} and Eq.~\ref{eq_mte}.
 %We first set the absorbed laser fluence down to $10^{-5} \text{ mJ/cm}^2$ to investigate the single-photon behavior of the model.
 %For 50 fs laser irradiation that results in $10^{-5} \text{ mJ/cm}^2$ absorbed fluence ($d_s \Delta E \text{ in Eq.~\ref{eq_Nph}}$), QE and MTE of a copper photocathode are plotted in. 
-Throughout the calculations, 4.31 eV was used for the work function ($\phi$).\cite{Dowell2006} The quantum efficiency demonstrates very good agreement with experimentally measured values from a copper photocathode cleaned by a hydrogen ion beam in situ.\cite{Dowell2006} Furthermore, the asymptotic properties of MTE is consistent with earlier predictions.\cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017}
+Throughout the calculations, 4.31 eV was used for the work function ($\phi$) \cite{Dowell2006}. The quantum efficiency demonstrates very good agreement with experimentally measured values from a copper photocathode cleaned by a hydrogen ion beam in situ \cite{Dowell2006}. Furthermore, the asymptotic properties of MTE is consistent with earlier predictions \cite{dowell2009_QuantumEfficiencyThermal,Feng2015,Dimitrov2017}.
 %It is noteworthy that the small discrepancy on the slope of MTE was also experimentally observed, as well as in simulations with realistic (rather than flat) density of states.\cite{Feng2015,Dimitrov2017}
 
-A generalized Fowler-DuBridge analysis\cite{Fowler1931,DuBridge1933} was performed to investiagte the contribution of multiphoton effects in the QE and MTE. Bechtel extended Fowler-DuBridge theory for multiphoton photoemission suggests that the total photocurrent density $J$ can be expressed as a sum of partial current densities due to $n$-photon absorption $J_n$:\cite{Bechtel1977,Ferrini2009,multiphoton_musumeci}
+A generalized Fowler-DuBridge analysis \cite{Fowler1931,DuBridge1933} was performed to investiagte the contribution of multiphoton effects in the QE and MTE. Bechtel extended Fowler-DuBridge theory for multiphoton photoemission suggests that the total photocurrent density $J$ can be expressed as a sum of partial current densities due to $n$-photon absorption $J_n$ \cite{Bechtel1977,Ferrini2009,multiphoton_musumeci}:
 \begin{equation}
 	J = \sum_{n = 0}^{\infty} J_n = \sum_{n = 0}^{\infty} \sigma_n I^n
 \end{equation}
-where $J_n$ is proportional to the $n$-th power of the intensity of incident laser $I$, and $\sigma_{n}$ is the series coefficient. Hence, the fraction of singly excited electrons among all emitted electrons can be calculated as:\cite{An2018}
+where $J_n$ is proportional to the $n$-th power of the intensity of incident laser $I$, and $\sigma_{n}$ is the series coefficient. Hence, the fraction of singly excited electrons among all emitted electrons can be calculated as \cite{An2018}:
 \begin{equation}\label{eq_single}
 	\frac{J_1}{J} = \frac{\sigma_1 I}{\sum_{n=0}^\infty \sigma_n I^n}.
 \end{equation}
@@ -168,7 +171,7 @@ For the $10^{-5} \textrm{ mJ/cm}^2$ absorbed fluence used in Fig.~\ref{fig_low},
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=250pt]{figs/boltzmann/single.eps}
+	\includegraphics*[width=280pt]{figs/boltzmann/single.eps}
 	\caption{(a) The total number of extracted electrons in each pulse for unit area fitted to a fourth degree polynomial function of absorbed fluence. (b) Fraction of singly excited electrons calculated based on generalized Fowler-DuBridge theory using Eq.~\ref{eq_single}.}
 	\label{fig_single}
 	%   \vspace*{-\baselineskip}
@@ -182,14 +185,14 @@ If the photon energy falls below the work function, single photon absorption can
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=250pt]{figs/boltzmann/high.eps}
+	\includegraphics*[width=280pt]{figs/boltzmann/high.eps}
 	\caption{(a) QE computed by Eq.~\ref{eq_qe} for a high fluence of $1 \textrm{ mJ/cm}^2$, compared to the low fluence ($10^{-5} \textrm{ mJ/cm}^2$) simulation over extended photon energy range. (b) MTE calculated based on Eq.~\ref{eq_mte} for $1 \textrm{ mJ/cm}^2$ and $10^{-5} \textrm{ mJ/cm}^2$ absorbed fluences. Two-photon absorbed electrons cause the non-monotonic behavior of MTE.}
 	\label{fig_high}
 	%   \vspace*{-\baselineskip}
 \end{figure}
 
 
-Recently, increase of intrinsic emittance induced by multiphoton photoemission from copper photocathodes under femtosecond laser illumination was experimentally verified,\cite{An2018} and showed qualitative agreement with our results. In that work, the growth of MTE was observed at the absorbed fluence of $7 \times 10^{-6} \textrm{ mJ/cm}^2$ with the photon energy 0.2 eV below the effective work function. According to our simulation in Fig.~\ref{fig_single}, the fraction of singly excited electrons is $\sim 76 \%$ for a similar laser profile.
+Recently, increase of intrinsic emittance induced by multiphoton photoemission from copper photocathodes under femtosecond laser illumination was experimentally verified \cite{An2018}, and showed qualitative agreement with our results. In that work, the growth of MTE was observed at the absorbed fluence of $7 \times 10^{-6} \textrm{ mJ/cm}^2$ with the photon energy 0.2 eV below the effective work function. According to our simulation in Fig.~\ref{fig_single}, the fraction of singly excited electrons is $\sim 76 \%$ for a similar laser profile.
 When the photon energy range was extended below the threshold for the low fluence simulation in Fig.~\ref{fig_high}, we also observe the MTE growth.
 Note the non-monotonic behavior of MTE can be captured theoretically only when multiphoton absorption is considered.
 
@@ -199,9 +202,9 @@ Note the non-monotonic behavior of MTE can be captured theoretically only when m
 
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
-	%\centering
-	\includegraphics*[width=250pt]{figs/boltzmann/brightness.eps}
-	\caption{Maximum achievable brightness calculated by Eq.~\ref{eq_brightness} as a function of the number of extracted electrons from Eq.~\ref{eq_Ne} and the required extraction electric field under the pancake aspect ratio approximation.\cite{pancake,rethfeld_schottky} The color scale represent the input photon energy to obtain the corresponding maximum achievable brightness. The dotted line and dashed line illustrate brightness calculated using fixed MTE. One thousand sets of photon energy and laser fluence were simulated to acquire maximum achievable brightness.}
+	\centering
+	\includegraphics*[width=300pt]{figs/boltzmann/brightness.eps}
+	\caption{Maximum achievable brightness calculated by Eq.~\ref{eq_brightness} as a function of the number of extracted electrons from Eq.~\ref{eq_Ne} and the required extraction electric field under the pancake aspect ratio approximation \cite{pancake,rethfeld_schottky}. The color scale represent the input photon energy to obtain the corresponding maximum achievable brightness. The dotted line and dashed line illustrate brightness calculated using fixed MTE. One thousand sets of photon energy and laser fluence were simulated to acquire maximum achievable brightness.}
 	%The applied electric field of 100 MV/m is required to extract $5.5 \times 10^{11}$ electrons from a cm$^2$ area under the pancake aspect ratio approximation.\cite{pancake}
 	\label{fig_brightness}
 	%   \vspace*{-\baselineskip}
@@ -209,7 +212,7 @@ Note the non-monotonic behavior of MTE can be captured theoretically only when m
 
 One of notable aspects of the high fluence laser irradiation simulation in Fig.~\ref{fig_high} is that the laser photon energy can be tuned to minimize MTE, thereby maximizing brightness for a fixed laser fluence. Therefore, by iterating over numerous input laser fluences and photon energies, one can plot the maximum achievable brightness for a given number of extracted electrons per pulse and the corresponding required extraction field $E_c$ as in Fig.~\ref{fig_brightness}.
 % Additionally, the charge density which corresponds to the 100 MV/m extraction limit in the pancake aspect ratio regime is reported,
-In the pancake aspect ratio regime, the charge density is directly proportional to the required extraction electric field, $e N_e = \epsilon_0 E_c$.\cite{pancake,rethfeld_schottky}
+In the pancake aspect ratio regime, the charge density is directly proportional to the required extraction electric field, $e N_e = \epsilon_0 E_c$ \cite{pancake,rethfeld_schottky}.
 Here, the brightness and the number of electrons for a 50 fs flat top pulse are calculated by Eq.~\ref{eq_brightness} and Eq.~\ref{eq_Ne}, respectively. The color scale shows the optimal photon energy above the threshold used to obtain the maximum brightness for corresponding charge extraction per pulse. Two features are of note. First, the optimal photon energy can be well above the threshold depending on desired amount of charge extraction for specific applications. Second, the maximum brightness as a function of the extracted areal charge density is no longer linear, but rather at 100 MV/m equivalent space charge fields the maximum brightness is reduced below the room temperature limit by a factor of $\sim 12$.
 
 

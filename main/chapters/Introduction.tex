@@ -1,32 +1,257 @@
 \chapter{Introduction}
 
-\section{SECTION 1}
-The text for Section 1 goes here, without brackets.
+\section{Photocathode}
 
-\section{SECTION 2}
-Section 2 text.
+Photocathodes are photoemissive materials that are used in electron injectors to generate electron beams for various applications.
+A photocathode is operated under an electric field in the range of 10's of MV/m \cite{musumeci2018advances} while a pulsed or continuous wave (CW) laser (200 nm $\sim$ 800 nm) photoexcites electrons that get extracted and accelerated in the electric field.
 
-\subsection{Subsection heading goes here}
-
-Subsection 1 text
-
-\subsubsection{Subsubsection 1 heading goes here}
-Subsubsection 1 text
-
-\subsubsection{Subsubsection 2 heading goes here}
-Subsubsection 2 text
-
-\section{SECTION 3}
-Section 3 text. The dielectric constant at the air-metal interface
-determines the resonance shift as absorption or capture occurs.
-
+High brightness electron source applications run the gamut in fields from high-energy nuclear physics to condensed matter physics: electron colliders \cite{wang2022high,ilc2019}, free electron lasers (FEL) \cite{ackermann2007operation}, beam cooling \cite{orlov2004ultra}, and electron microscopy \cite{kuwahara2012_30kVSpinpolarizedTransmission}.
+Electron beam brightness is the critical figure of merit for many of these applications.
+%The beam brightness in a photoinjector is essentially determined by the brightness at the photocathode:
+The brightness at the photocathode ($\mathcal{B}_{4D}$) is essentially the upper limit of the beam brightness in a photoinjector:
 \begin{equation}
-k_1=\frac{\omega }{c({1/\varepsilon_m + 1/\varepsilon_i})^{1/2}}=k_2=\frac{\omega
-\sin(\theta)\varepsilon_{air}^{1/2}}{c} QQ
+\mathcal{B}_{4D} \propto \frac{Q}{\epsilon_x \epsilon_y} = \frac{Q \; m_e c^2}{\sigma_x \sigma_y \; \textrm{MTE}} 
 \end{equation}
+where $Q$ is the bunch charge from the cathode, $\epsilon_{x y}$ is the normalized emittance of the beam, $\sigma_{x,y}$ is the rms laser spot size, $m_e c^2$ is the electron rest energy, and MTE is the mean transverse energy of the photoelectrons at the photocathode \cite{Musumeci2018,bae2018_BrightnessFemtosecondNonequilibrium}. The laser spot size is primarily determined by the space charge beam dynamics under the electric field after photoemission.
+The bunch charge $Q$ is determined by the strength of the electric field, the laser power, and the quantum efficiency of the photocathode. Quantum efficiency (QE) is a material property defined as the number of electrons emitted by the photocathode divided by the number of photons incident on the photocathode surface. QE tends to degrade over time during beam operation, and the speed of degradation is referred as an operational lifetime of the photocathode.
+%In modern applications, improving the photocathode lifetime is one of the most important challenges.
+The importance of the photocathode lifetime started gaining attention recently, especially for high average current applications. 
 
-\noindent
-where $\omega$ is the frequency of the plasmon, $c$ is the speed of
-light, $\varepsilon_m$ is the dielectric constant of the metal,
-$\varepsilon_i$ is the dielectric constant of neighboring insulator,
-and $\varepsilon_{air}$ is the dielectric constant of air.
+The MTE is determined by material properties that affect the photoemission process inside the photocathode, the cathode surface, and the photoemission drive laser properties.
+Dowell and Schmerge demonstrated that Spicer's three-step photoemission model \cite{spicer1964} can be utilized to derive expressions for the photoemission QE and MTE of metal photocathodes \cite{dowell2009_QuantumEfficiencyThermal}. While this was originally derived under the assumption of a free electron Fermi gas and a flat density of states at zero temperature,  recent studies have extended this approach to account for a realistic density of states and non-zero (but constant) electronic temperature ($T_e$) \cite{Dimitrov2017,Feng2015}. These models predict that as the photon energy ($h\nu$) approaches the work function ($\phi$), MTE converges to the thermal energy of electrons (MTE $\approx k_B T_e$). For a photon energy well above the threshold ($h\nu - \phi \gg 0$), the MTE is linear in the photon excess energy, MTE $ \approx (h\nu-\phi)/3$. Both behaviors have been demonstrated experimentally \cite{Feng2015}. These studies predict that MTE is minimized by operating with very low photon excess energy, but do not account for dynamic or intensity dependent effects, such as multiphoton excitation or laser-induced ultrafast electron heating.
+
+For certain applications, such as FEL and electron microscopy, response time is also an important property of a photocathode \cite{musumeci2018advances}.
+Femtosecond scale electron pulses generated from photocathode sources (this process typically involves additional compression stages downstream) play a critical role in probing time-resolved ultrafast dynamics.
+In particular, this property differentiates photoemission sources from thermionic and field emission sources.
+Thermionic sources are robust and low-cost but suffer from a high MTE and lack on/off control of the flux \cite{herring1949thermionic}.
+Field emission can provide very low MTE electron beams, but the amount of bunch charge tends to be in the order of a single electron, and the response time is slower compared to photoemission sources \cite{batson2002sub}.
+
+
+\section{Photocathode materials}
+
+Photocathode materials can be classified into two groups: metals and semiconductors.
+Metallic photocathodes, and in particularly copper photocathodes, are popular choices for ultrafast electron sources due to their prompt response time ($<50$ fs) and low vacuum requirements \cite{ttm,plasmon}. However, compared to semiconducting emitters, they suffer from several orders of magnitude less QE ($10^{-5} \sim 10^{-6}$) due to frequent electron-electron scattering during the transport of the excited population from the bulk to the surface. Thus, metallic photocathodes can demand a very high laser intensity   ($\textrm{10s of GW/cm}^2$) for femtosecond emission cases, for example, in the blowout regime\cite{blowout} of high charge photoinjectors.
+Despite higher QE's ($1 \sim 10 \%$), semiconductor photocathodes suffer from extreme vacuum sensitivity that results in a short operational lifetime. Among popular semiconductor photocathodes, Cs$_2$Te is considered the most robust but requires a UV light for photoemission, while cesiated GaAs offer the highest QE at the cost of a short operational lifetime. Alkali antimonides (Cs$_3$Sb, K$_2$CsSb, NaK$_2$Sb) can operate in a moderate vacuum requirement with a high QE in the visible wavelengths.
+
+%% Exotic materials
+Various attempts have been made in the past few decades to produce a robust photocathode with a high QE.
+In this paragraph, a few studies are discussed.
+%A recent work discovered photocathode materials that can be potentially air-stable with a high QE by screening 74,000 semiconducting materials with Machine Learning and Density Functional Theory (DFT). 
+A recent work took a data-driven approach to screen for high brightness photocathode materials. Machine learning and Density Functional Theory (DFT) were used to screen over 74,000 semiconducting materials. The study claims the family of M$_2$O (M=Na, K, Rb) can be potentially air-stable with desired photocathode properties, such as a low intrinsic emittance and high QE \cite{antoniuk2021novel}.
+Growing an oxidized layer (MgO) on metal (Ag) has been proposed to lower the work function of the metal photocathode \cite{nemeth2010high}. Later an experimental study demonstrated lowering 2 eV of work function by growing BaO$_2$ on Ag \cite{droubay2015work}.
+Perovskite materials are among the most actively studied materials in the solar cell community. However, the high work function is the main drawback for high brightness applications. Recent theoretical works predicted that some Perovskite materials could have a low work function ($1 \sim 2$ eV) \cite{ma2021discovery,jacobs2016understanding}.
+Various types of diamond photocathodes have photocathode properties similar to that of metal photocathodes. The cathodes tend to be very robust, but they can only operate in the UV range \cite{perez2014high,velardi2016highly}.
+Bi-Ag-O-Cs photocathode was reported to have a very high QE ($\sim$10\%) near the photoemission threshold (480 nm) \cite{sommer1961bismuth, sommer1956multi}.
+Another data-driven study using DFT screened over 4,000 2D materials to find desired coating layer materials that can protect photocathodes from ion back bombardment and chemical poisoning \cite{wang2018overcoming,wang2020computational}.
+
+%% Coating layers
+
+\section{Spin polarization Photocathode}
+
+\subsection{Applications}
+In 1922, Otto Stern and Walter Gerlach showed that the spatial orientation of angular momentum is quantized by splitting an atomic Ag beam depending on the spin of orbiting electrons under a nonuniform magnetic field. Since then, quantum mechanical intrinsic property spin has played an important role in understanding various phenomena in the field of physics. Recent developments on spin-polarized electrons sources have allowed broad and diverse spin-related experiments that run the gamut in fields from high-energy nuclear physics to condensed matter physics.
+	
+Future nuclear physics facility Electron Ion Collider (EIC) allows investigation of hadronic structures and exploration of new regimes of strongly interacting matter that will help to understand the fundamental quantum theory of the quark and gluon fields that constitute most visible matter in the universe \cite{aschenauer2019electron,accardi2016electron}. Since electrons do not manifest any internal structure, they are considered an optimal probe for the more complicated nucleons and nuclei. When electrons are scattered off a nucleon, a virtual photon is created that can see inside the nucleon. Since the virtual photon energy determines the resolution power, EIC is required to accelerate electrons to sufficiently high energy so that it can destroy the proton target into partons \cite{NASreport}. This process is called deep-inelastic scattering (DIS), and it allows the investigation of various issues that the nuclear physics community is interested in \cite{aschenauer2019electron}. One of the issues is gluons' contribution to the total spin of a proton (1/2). Experiments at CERN demonstrated quarks and antiquarks could explain only 30\% of the total spin of a proton \cite{lrpns}. Only an EIC with a highly spin-polarized electron beam can explore the overall spin contribution of quarks, antiquarks, and gluons combined. In a sense, EIC can be referred as the most powerful (in terms of resolution and intensity) spin-polarized electron microscope for nuclei and nucleons \cite{NASreport}.
+
+As opposed to EIC, if electrons have low energy ($\lesssim$ 30 eV) during the scattering, it can probe the surface structure ($\lesssim$ 0.5 nm) of single-crystals and epitaxial thin films. This technique is called Low-energy electron microscopy (LEEM), and it is one of the most commonly used routines in the condensed matter physics community. When spin-polarized electrons are used for the technique (SPLEEM), it allows a real space imaging of the magnetic domain structure on surfaces by exchange interaction \cite{n2002spin}. Transmission electron microscopy (TEM) exploits electron scattering at the keV range (10s - 100s keV) where an electron beam is transmitted through a thin specimen ($\lesssim$100 nm)  which allows high-resolution imaging ($\sim$0.05 nm) in 3D space. Coherent spin-polarized electron beam at this regime enables investigation of spin properties such as interference of spinor waves, spin-flip effects in an exchange interaction, and spin-orbit interactions. Furthermore, the Pauli exclusion principle of spin-polarized beam offers a possibility to achieve a higher contrast in TEM due to the enhanced antibunching effect \cite{kuwahara2014coherence}. Remarkably, spin-polarized electron sources in modern SPLEEM, SPTEM, and EIC are all based on GaAs technology. In the next few paragraphs, the history of state-of-art GaAs photocathode is reviewed in the light of its application in EIC particularly.
+
+\subsection{GaAs photocathode}
+
+\begin{figure*}
+%   \vspace*{-.5\baselineskip}
+\centering
+\includegraphics*[width=400pt]{figs/intro/nea.pdf}
+\caption{Negative electron affinity (NEA) activation process on GaAs \cite{liu2017_ComprehensiveEvaluationFactors}. Electron affinity (EA) is defined as the energy difference between vacuum level $E_\infty$ and the bottom of the conduction band $E_{CB}$. NEA is achieved when the vacuum level is lower than the bottom of the conduction band.}
+\label{fig_nea}
+%   \vspace*{-\baselineskip}
+\end{figure*}
+
+% NEA
+In 1965, GaAs was first highlighted as an attractive photocathode with the discovery of negative electron affinity (NEA) activation on the surface of $p$-type semiconductors \cite{scheer1965}. It was demonstrated that by exposing the GaAs surface to electropositive metal, atomic cesium, a strong dipole layer can be formed that lowers the vacuum level. If the cesiated GaAs is $p$-doped, the vacuum level can be even lower than the conduction band minimum due to the downward band bending, achieving NEA (see Fig.~\ref{fig_nea}). When the surface is NEA activated, excited electrons that have relaxed down to the bottom of the conduction band can still escape into the vacuum once they arrive at the surface, resulting in a high QE, even near the photoemission threshold.
+
+\begin{figure}
+%   \vspace*{-.5\baselineskip}
+\centering
+\includegraphics*[width=300pt]{figs/intro/selection_rule.pdf}
+\caption{Spin dependent selection rule in GaAs \cite{liu2017_ComprehensiveEvaluationFactors}. The numbers next to each transition are relative ratio of transition rates. Solid line transitions require $+\hbar$ circularly polarized light while dashed line transitions require $-\hbar$ circularly polarized light.}
+\label{fig_selection_rule}
+%   \vspace*{-\baselineskip}
+\end{figure}
+
+% spin pol
+An electron beam is considered spin-polarized when there are an uneven number of spin `up' state electrons versus spin `down' state electrons. The spin polarization of an ensemble of electrons can be expressed with the number of spin-up state electrons $N_\uparrow$ and the number of spin-down state electrons $N_\downarrow$ as
+\begin{equation}
+	P = \frac{N_\uparrow - N_\downarrow}{N_\uparrow + N_\downarrow}.
+\end{equation}
+Spin-polarized photoemission from III-V semiconductor GaAs can be understood with spin-dependent selection rule in Fig.~\ref{fig_selection_rule} \cite{liu2017_ComprehensiveEvaluationFactors}. In the energy diagram, the valence band is split into $P_{3/2}$ and $P_{1/2}$ energy levels due to the spin-orbit coupling. If photons have appropriate energy to selectively excite electrons from $P_{3/2}$ band to the conduction band with circular polarization that has $\pm \hbar$ spin angular momentum, spin asymmetry can be induced among the excited electrons. The number next to each transition is the ratio between the transition rates calculated by Fermi's golden rule \cite{pierce1976}. Then, the spin polarization of excited electrons is
+\begin{equation}
+	P = \frac{N_\uparrow - N_\downarrow}{N_\uparrow + N_\downarrow} = \frac{3-1}{3+1} = 50\%.
+\end{equation}
+When the excited electrons are transported to the surface, the spin polarization decreases due to spin-dependent scatterings, and only $\sim$35\% of polarization is achieved for photoelectrons at room temperature \cite{liu2017_ComprehensiveEvaluationFactors}.
+Note NEA is required to extract spin-polarized photoelectrons since the spin-dependent selection rule only allows the photoexcitation from the top of the valence band to the bottom of the conduction band.
+
+To overcome the theoretical maximum spin polarization of 50\% due to the degeneracy of light-hole and heavy-hole bands, Matsuyama \emph{et al.} suggested using two-photon absorption so that the spin angular momentum of $\pm2 \hbar$ can be transferred to the excited electrons \cite{matsuyama2001spin}. This would allow transition into only one of spin up or down state in Fig.~\ref{fig_selection_rule}. Later, it has been shown theoretically \cite{bhat2005two} and experimentally \cite{mccarter2014_MeasurementElectronBeam} that the angular momentum is only conserved under a spherically symmetric system for two-photon absorption, and measured polarization is 50\% identical to the one-photon absorption case. Another attempt was to utilize the orbital angular momentum of photons in addition to the spin angular momentum \cite{clayburn2013}. However, experimentally measured spin polarization was nearly 0\%. A theoretical study explains the spatial distribution of polarization pattern is concentric, and the total spin polarization averaged over the beam position would be zero \cite{solyanik2019spin}.
+
+The most reliable method to achieve a high spin polarization from GaAs is to exert a lattice strain aimed at breaking the valence band degeneracy between heavy-hole and light-hole bands. Both In$_{1-y}$Ga$_y$As layer grown on GaAs substrate and GaAs epitaxially grown on a GaAs$_{1-x}$P$_x$ buffer successfully showed a high polarization of nearly 90\% at a cost of decreased photoelectron yield, or quantum efficiency (QE) \cite{maruyama1992_ElectronspinPolarizationPhotoemission}.
+%In Fig.~\ref{fig_strain}, spin polarization and quantum efficiency were plotted over a range of photon energy for GaAs on GaAs$_{0.72}$P$_{0.28}$ buffer layer which has 87\% measured strain.
+The major disadvantage of exerting lattice strain is that the QE can drop by more than 2 orders of magnitude due to decreased sample thickness ($\sim 0.1 \mu $m) along with isolation of the heavy hole band.
+
+According to a recent report \cite{NASreport}, a spin-polarized electron source should emit $\sim$50 mA of photocurrent to achieve satisfactory performance for EIC. Quantum Efficiency (QE), or photoelectron yield, is an important property of GaAs photocathodes because increasing laser power to achieve such a high current is expensive and can damage the cathode due to heating \cite{peng2019optical}. However, as mentioned earlier, the major drawback of exerting strain on GaAs for high spin polarization is a reduced QE. Recently, a superlattice structure with distributed Bragg reflector (DBR) stack has been proposed and showed a high QE of 6.4\% with a high polarization of 84\% \cite{liu2016_RecordlevelQuantumEfficiency}. In this work, the GaAs/GaAsP superlattice structure was constructed to compensate for the decreased thickness of the strained sample. Additionally, a DBR stack (GaAsP/AlAsP) is installed under a buffer layer that serves as a Fabry-Perot cavity that reflects light back to the sample repeatedly at each layer \cite{liu2016_RecordlevelQuantumEfficiency}.
+
+Although excited electrons have initial spin polarization of 50\% in a bulk GaAs, the measured polarization of photoelectrons is $\sim$35\% due to spin relaxation during the transport of excited electrons to the surface. In continuous wave (CW) mode, electrons in the conduction band will arrive at an equilibrium polarization $P$ that follows
+\begin{equation}
+	\frac{dP}{dt} = \frac{P_0}{\tau} - \frac{P}{\tau} - \frac{P}{\tau_s} =0,
+\end{equation}
+where $P_0$ is the initial polarization of excited electrons (50\%), $\tau$ is the conduction band lifetime ($\sim 10^{-9}$s), and $\tau_s$ is the spin relaxation time. The terms represent polarization creation, polarization loss due to electron recombination, and spin relaxation, respectively. Then, the equilibrium polarization is given by \cite{liu2017_ComprehensiveEvaluationFactors}
+\begin{equation}
+	P = P_0 \frac{1}{1+ \frac{\tau}{\tau_s}}.
+\end{equation}
+In the case of \emph{p}-type GaAs, the spin relaxation mechanism is dominated by spin exchange interaction between electrons and holes. Then, the spin relaxation time is proportional to the temperature \cite{liu2017_ComprehensiveEvaluationFactors,song2002_SpinRelaxationConduction}. Therefore, an operation of the electron source at a cryogenic temperature is preferred to minimize spin relaxation. In fact, it has been experimentally demonstrated that the polarization can be as high as 43\% at 110 K \cite{pierce1980_GaAsSpinPolarized}.
+
+Another approach to increase QE is via the use of the Mie resonance effect.
+It has been recently demonstrated that cylindrical nanopillar arrays on GaAs can induce Mie resonance, which drastically increases the scattering cross-section of light and, hence, absorption.
+%More than an order of decrease in reflectivity was observed for Si in the visible wavelength spectrum.
+%Considering GaAs also has a similar reflectivity (30 - 40 \%) in the range, a similar performance increase is expected \cite{peng2019optical} with the Mie resonator geometry.
+The Mie resonances in GaAs nanopillar-array reduce light reflectivity to less than 6\% from a typical value $>$35\% \cite{peng2019optical}.
+
+The major drawback of NEA GaAs photocathode is that the activated surface suffers from extreme vacuum sensitivity because the activation layer typically forms a monolayer weakly bound to the bulk and, therefore, is chemically vulnerable. The vacuum sensitivity results in degrading of the photocathode quality, mainly quantum efficiency, which can limit the photocathode lifetime to mere hours following the cathode activation \cite{bae2018_RuggedSpinpolarizedElectron}. The degradation can be explained by three main mechanisms: (1) ion-back bombardment \cite{grames2011_ChargeFluenceLifetime}, (2) chemical poisoning \cite{chanlek2014_DegradationQuantumEfficiency}, (3) and thermal desorption of the activation layer \cite{kuriki2011_DarklifetimeDegradationGaAs}. Ion-back bombardment occurs as extracted electrons ionize residual gas in the vacuum chamber, and the ionized molecules are attracted to the cathode surface and contaminate the activation layer. It has been demonstrated that extracting electrons a few mm off the electron gun center by deflecting the beam can significantly reduce ion-back bombardment by separating the contamination spot from the extraction spot \cite{grames2011_ChargeFluenceLifetime}. For a better performance against chemical poisoning, the lifetime showed a factor of $\sim$2 improvement when both Cs and Li are used for electropositive metal atoms with NF$_3$ oxidant. If the charge extraction lifetime of a photocathode is defined as the amount of charge extracted from the cathode until QE drops by a factor of $1/e$, the current state-of-art GaAs electron gun has the charge extraction lifetime in the order of 1000 C \cite{grames2011_ChargeFluenceLifetime}. To satisfy the current requirement mentioned earlier (50 mA) \cite{NASreport}, one can expect the operational lifetime is only in the order of 10 hours (1000 C/50 mA) in the best case scenario. Therefore, research on improving the operational lifetime of NEA GaAs is the utmost issue for applications in future nuclear physics facilities.
+	 
+Although $n$-type Cs$_3$Sb, Cs$_2$Te, and CsI were suggested \cite{sonnenberg1969,sonnenberg1969Cs} and demonstrated \cite{guo1996,hagino1969,zhao1993} as alternative activation layers nearly five decades ago, there have been very few studies done on the performance of GaAs photocathodes activated with such layers and other alternative activation materials. Recently, Cs$_2$Te received attention as an alternative activation layer because Cs$_2$Te itself is a popular solar blind photocathode known for its robustness under harsh vacuum conditions \cite{michelato2008_Cs2TePHOTOCATHODESROBUSTNESS}. Cs$_2$Te coated GaAs showed successful NEA activation \cite{sugiyama2011_StudyElectronAffinity, uchida2014_STUDYROBUSTNESSNEAGAAS,kuriki2015_GaAsPhotocathodeActivation} and a factor of 5 improvement in charge extraction lifetime at 532 nm without negative effects on spin polarization \cite{bae2018_RuggedSpinpolarizedElectron}. Furthermore, Cs-Sb-O activated bulk and superlattice GaAs were demonstrated to have an improved lifetime by a factor of 7 at 780 nm \cite{bae2020_ImprovedLifetimeHigh,cultrera2020_LongLifetimePolarized}.
+
+In summary, the development of state-of-art spin-polarized electron source NEA GaAs photocathode is reviewed, along with a brief overview of its applications. It was reported that exerting a strain on GaAs can overcome the limit of achievable maximum spin polarization from bulk GaAs by splitting the heavy-hole and light-hole bands at the cost of significantly decreased QE. Superlattice structures with distributed Bragg reflector and nanopillar array were proposed to compensate for the decreased QE. The major disadvantage of GaAs photocathode is the lifetime issue. Recent works have shown alternative activation methods can significantly reduce the vacuum sensitivity.
+
+
+\subsection{Measuring Spin polarization:  Mott polarimeter}
+
+An electron beam is spin polarized when there are unequal number of spin `up' state electrons and `down' state electrons with respect to a spatial direction. Based on the spin angular momentum commutation relations, one can express the spin operator $\mathbf{S}$ with Pauli matrices $\boldsymbol{\sigma}$ as follows \cite{Kessler}
+	\begin{equation}
+		\mathbf{S} = \frac{\hbar}{2} \boldsymbol{\sigma},
+	\end{equation}
+	where
+	\begin{equation}
+		\sigma_z = 
+		\begin{pmatrix}
+		1 && 0 \\
+		0 && -1
+		\end{pmatrix}, 
+		\sigma_x =
+		\begin{pmatrix}
+		0 && 1 \\
+		1 && 0
+		\end{pmatrix}, 
+		\sigma_y = 
+		\begin{pmatrix}
+		0 && -i \\
+		i && 0
+		\end{pmatrix}.		
+	\end{equation}
+	When an electron is in a spin state $\chi = \begin{pmatrix}
+	a \\ b
+	\end{pmatrix}$, the polarization in $z$ direction can be represented by
+	\begin{equation}
+		P = \frac{\langle \chi |\sigma_z | \chi \rangle}{\langle \chi | \chi \rangle}
+		= \frac{|a|^2 - |b|^2}{|a|^2 + |b|^2}.
+	\end{equation}
+	Over multiple spin measurements, $P$ can be also expressed as
+	\begin{equation}
+		P = \frac{N_{\uparrow}-N_{\downarrow}}{N_{\uparrow}+N_{\downarrow}},
+		\label{eq_pol}
+	\end{equation}
+	where $N_{\uparrow}$ and $N_{\downarrow}$ are the number of observed spin up electrons and spin down electrons  during the measurements, respectively. Similarly, spin polarization of an ensemble of electrons is also expressed by Eq.~\ref{eq_pol} \cite{Kessler}. For example, if there is an ensemble of 10 electrons where 8 of them are in spin up state and the others are in spin down state, 4 out of 10 electrons can be considered as unpolarized portion of the ensemble, and the rest 60\% is completely polarized.
+
+	
+	The Stern-Gerlach experiment is a historical landmark experiment that demonstrated the spatial orientation of angular momentum is quantized by splitting an atomic Ag beam depending on the spin of orbiting electrons. Although it may be intuitive to consider the Stern-Gerlach experiment set up as a method to measure the spin polarization of an electron beam, it turned out electrically charged particles experience additional Lorentz force during the splitting in a magnetic field, unlike electrically neutral Ag atoms. As a result, the beam spreading due to the Lorentz force overcomes the splitting effect from the spin orientation \cite{Jozwiak_thesis}. Such difficulties limit spin polarization to be measured indirectly based on spin-dependent interactions.
+	%In this paper, conventional spin polarimeter based on Mott scattering is reviewed and a new type of polarimeter based on exchange scattering is compared with discussion of possible applications in photocathode research.
+	The spin polarimeter based on Mott scattering is reviewed in the next few paragraphs.
+	
+	%%\begin{figure}
+	%%%   \vspace*{-.5\baselineskip}
+	%%\centering
+	%%\includegraphics*[width=200pt]{figs/intro/scatt_geo.png}
+	%%\caption{Mott scattering geometry. $k$ and $k'$ are initial and final momentum vectors, respectively \cite{Kessler}.}
+	%%\label{fig_scatt_geo}
+	%%%   \vspace*{-\baselineskip}
+	%%\end{figure}
+	
+	Currently, the most commonly used spin polarimeters at low energies are based on Mott scattering, which is also referred as spin-orbit interaction. The coupling between electron spin and orbital angular momentum can be derived from the Dirac equation as \cite{Kessler}
+	\begin{equation}
+		H_{SO} = -\boldsymbol{\mu} \cdot \mathbf{B} \propto \mathbf{s \cdot L},
+		\label{eq_so}
+	\end{equation}
+	where $\boldsymbol{\mu}$ is the electron's spin magnetic moment, $\mathbf{B}$ is effective magnetic field, $\mathbf{L}$ is the orbital angular momentum, and $\mathbf{s}$ is the spin angular momentum. If we assume the wave function of a Mott scattered electron to be the asymptotic form of a plane wave:
+	\begin{equation}
+		\psi \xrightarrow[r \to \infty]{} ae^{ikz} + a'(\theta,\phi)\frac{e^{ikr}}{r},
+	\end{equation}
+	the differential cross section can be derived in terms of spin polarization \cite{Kessler}:
+	\begin{equation}
+	\sigma(\theta,\phi) = \sigma_0(\theta)[1 + S(\theta)\mathbf{P \cdot \hat{n}}],
+	\label{eq_cross}
+	\end{equation}
+	where $\theta$ and $\phi$ are scattering angles, and $\mathbf{\hat{n}}$ is the normal unit vector to the plane defined by initial and final momentum. $\sigma_0$ is the cross-section without spin-orbit coupling, and coefficient $S(\theta)$ is called the Sherman function. The spin dependence of cross-section allows spin polarization measurements by comparing signal intensities at two different detector positions. 
+	
+	\begin{figure}
+	%   \vspace*{-.5\baselineskip}
+	\centering
+	\includegraphics*[width=400pt]{figs/intro/mott.pdf}
+	\caption{Schematic of a Mott polarimeter.}
+	\label{fig_mott}
+	%   \vspace*{-\baselineskip}
+	\end{figure}
+	
+	Based on Eq.~\ref{eq_cross}, a Mott polarimeter can be designed as in Fig.~\ref{fig_mott}. During the measurements, transversely spin-polarized electron beam enters the polarimeter from electron lens assembly and gets scattered at high spin-orbit coupling target with high energy (typically $\sim$20 keV).	Heavy nuclei atoms such as gold or tungsten are common choices for the target material because the first term of perturbation expansion of Eq.~\ref{eq_so} is proportional to $Z^4$ where $Z$ is the atomic number \cite{Jozwiak_thesis}. Then, the scattered electrons are detected by channeltrons which work as an electron multiplier to amplify signal intensity.
+	
+
+	
+	When the two electron detectors are placed symmetrically, the asymmetry of the signal intensities ($N_L, N_R$) due to the spin-orbit coupling can be calculated as
+	\begin{equation}
+	\begin{aligned}
+		A_{SO} & = \frac{N_L - N_R}{N_L + N_R} \\ 
+	&	= \frac{[1 + S(\theta)\mathbf{P \cdot \hat{n}}] - [1 - S(\theta)\mathbf{P \cdot \hat{n}}] }{[1 + S(\theta)\mathbf{P \cdot \hat{n}}] + [1 - S(\theta)\mathbf{P \cdot \hat{n}}]} \\
+	& = S(\theta)\mathbf{P \cdot \hat{n}}.
+	\label{eq_asy_mott}
+	\end{aligned}
+	\end{equation}
+	This equation implies that spin polarization is directly proportional to the asymmetry by the Sherman function coefficient. Although the Sherman function can be calculated theoretically based on the Mott scattering off a single atom, it is often calibrated experimentally due to multiple and inelastic scatterings using electron sources with known spin polarization such as GaAs.
+	
+	Assuming the number of detected electrons $N_i$ follows the Poisson statistics ($\Delta N_i \rightarrow \sqrt{N_i}$), the statistical uncertainty of a spin polarimeter can be calculated as \cite{Jozwiak_thesis}
+	\begin{equation}
+	\begin{aligned}
+			\Delta P & = \frac{1}{S(\theta)} \Delta A_{SO} \approx \sqrt{\frac{1}{(N_L + N_R)S(\theta)^2}}\\
+			& = \sqrt{\frac{1}{N_0 (\frac{N_L + N_R}{N_0}S(\theta)^2)}} = \sqrt{\frac{1}{N_0 (\frac{I}{I_0}S(\theta)^2)}},
+	\end{aligned}
+	\end{equation}
+	where $N_0$ and $I_0$ are the number of electrons and current entering the polarimeter, and $I$ is the total current detected. Then, a unitless figure of merit can be defined as 
+	\begin{equation}
+		\eta = \frac{I}{I_0} S(\theta)^2.
+	\end{equation}
+	When $S(\theta)$ is substituted with a calibrated effective Sherman function $S_{eff}$, a state-of-art Mott polarimeter typically achieves $\eta$ around $10^{-4}$ \cite{McCarter2010}.
+	
+	%%\begin{figure}
+	%%%   \vspace*{-.5\baselineskip}
+	%%\centering
+	%%\includegraphics*[width=250pt]{figs/intro/neg_corr.png}
+	%%\caption{(a,b,c) Ratio of detected current to the total current entering the polarimeter, effective Sherman function, and figure of merit as a function of target bias, or energy of scattering electrons \cite{McCarter2010}. A gold target was used.}
+	%%\label{fig_opt}
+	%%%   \vspace*{-\baselineskip}
+	%%\end{figure}	
+	
+	Designing a Mott polarimeter involves maximizing two parameters $I/I_0$ and $S(\theta)^2$, which depends on the energy of electrons at the moment of scattering and the scattering angle. Unfortunately, the two parameters are usually in a negative correlation \cite{McCarter2010}.
+	%In Fig.~\ref{fig_opt}, a typical negative correlation between the effective Sherman function $S_{eff}$ and the detected current $I/I_0$ is illustrated \cite{McCarter2010}.
+	As the target bias, which determines the energy of scattering electrons, increases, the effective Sherman function also increases while the detected current decreases. For the scattering angle, typically $\sim 120 ^{\circ}$ is used to maximize the effective Sherman function that prevents domination of systematic uncertainty from the Sherman function itself. Retarding potential Mott polarimeter has been recently developed: a retarding potential is applied near the detectors to screen inelastically scattered electrons that lower the effective Sherman function. Although this type of Mott polarimeter has become the most popular option due to the compact design, the figure of merit could not be improved significantly ($\eta \sim 10^{-4}$) \cite{Jozwiak_thesis}. Despite such a low figure of merit, a Mott polarimeter is the most popular option because target materials are robust and do not require maintenance.
+
+\section{Thesis outline}
+
+The first and last chapters of this thesis provide an introduction and summary, respectively. In chapter 2 to 4, we outline our srudies of semiconductor activation of GaAs photocathodes to improve lifetime performance for high current applications \cite{bae2018_RuggedSpinpolarizedElectron,bae2020_ImprovedLifetimeHigh, bae2022}. Chapter 5 presents a theoretical work on photoemission dynamics of Cu photocathodes under high fluence femtosecond scale laser pulses \cite{bae2018_BrightnessFemtosecondNonequilibrium}.
+
+%First, we were motivated from a recent work that reported a successful NEA activation of GaAs with Cs$_2$Te.
+
+In chapter 2, we report a successful NEA activation of GaAs with Cs$_2$Te and confirmed it by measuring spectral response near the bandgap energy of GaAs.
+Auger electron spectroscopy was used to characterize the NEA surface elements.
+The lifetime performance of Cs$_2$Te activated GaAs was compared to that of the standard Cs-O activated GaAs.
+Lastly, the spin polarization of each photocathode was measured with a commissioned Mott polarimeter.
+A similar set of measurements were performed in chapter 3 to characterize Cs-Sb-O activated GaAs photocathodes.
+We optimized the growth recipe using Cs, Sb, O$_2$ by comparing photocathode parameters of various cathodes.
+In chapter 4, the performance of Cs-Sb-O activated GaAs photocathode was further characterized in a high voltage DC gun for a high current extraction --the ultimate test to characterize the performance of any photocathode candidate for high average current beam applications.
+
+Chapter 5 showcases a theoretical work where we studied the nonequilibrium thermodynamics of Cu cathode irradiated by high laser fluence. We calculated the time-dependent electron occupation function by the Boltzmann equation and estimated photocathode parameters based on Spicer's three-step model \cite{spicer1964}.
+While this chapter is not related to spin-polarized beam production, the general question tackled is potentially significant for any low-emittance photocathode irradiated with a very high intensity laser pulse, including III-V semiconductor photocathodes such as GaAs.

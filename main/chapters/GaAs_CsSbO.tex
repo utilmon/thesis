@@ -1,38 +1,42 @@
-\chapter{G\lowercase{a}A\lowercase{s} activation with C\lowercase{s}-S\lowercase{b}-O}
+%\chapter{G\lowercase{a}A\lowercase{s} activation with C\lowercase{s}-S\lowercase{b}-O}
+\chapter{Improved lifetime of a high spin polarization superlattice photocathode}
 
-\section{abstract}
+This chapter was originally published as Ref.~\cite{bae2020_ImprovedLifetimeHigh}.
+
+\section{Abstract}
 Negative Electron Affinity (NEA) activated surfaces are required to extract highly spin polarized electron beams from GaAs-based photocathodes, but they suffer extreme sensitivity to poor vacuum conditions that results in rapid degradation of quantum efficiency. We report on series of unconventional NEA activations on surfaces of bulk GaAs with Cs, Sb, and O$_2$ using different methods of oxygen exposure for optimizing photocathode performance. One order of magnitude improvement in lifetime with respect to the standard Cs-O$_2$ activation is achieved without significant loss of electron spin polarization and quantum efficiency by codepositing Cs, Sb, and O$_2$. A strained GaAs/GaAsP superlattice sample activated with the codeposition method demonstrated similar enhancement in lifetime near the photoemission threshold while maintaining 90\% spin polarization.
 
 \section{Introduction}
 %The demand for high quality spin polarized electron sources has been increasing recently in high energy nuclear physics community for applications in future facilities, such as the Electron Ion Collider and the International Linear Collider
-Highly spin polarized electron beams with high currents are required by future nuclear physics facilities such as the Electron Ion Collider and the International Linear Collider.\cite{eic,lrpns,nsac} Photocathode sources capable of providing spin polarized electron beams at high currents ($\sim$ 50 mA)\cite{NASreport} for extended period of time which are robust against less than ideal vacuum conditions are required in order to reduce the cost and complexity of operating these new facilities. Long lifetime polarized electron sources are also of interest for electron microscopy technologies that exploits spin polarization to probe magnetization in materials and nanostructures at the nanoscale level. Additionally, bright spin polarized sources driven with a short pulse laser can enable time studies of magnetization dynamics.\cite{suzuki2010_RealTimeMagnetic, kuwahara2012_30kVSpinpolarizedTransmission,vollmer2003}
-GaAs-based photocathodes are the present state of the art for the spin polarized electron sources because they can provide highly spin polarized electron beams with high efficiency.\cite{liu2016_RecordlevelQuantumEfficiency} However, their short operational lifetime poses limits particularly for applications requiring high average current.\cite{cardman2018}
+Highly spin polarized electron beams with high currents are required by future nuclear physics facilities such as the Electron Ion Collider and the International Linear Collider \cite{eic,lrpns,nsac}. Photocathode sources capable of providing spin polarized electron beams at high currents ($\sim$ 50 mA) \cite{NASreport} for extended period of time which are robust against less than ideal vacuum conditions are required in order to reduce the cost and complexity of operating these new facilities. Long lifetime polarized electron sources are also of interest for electron microscopy technologies that exploits spin polarization to probe magnetization in materials and nanostructures at the nanoscale level. Additionally, bright spin polarized sources driven with a short pulse laser can enable time studies of magnetization dynamics \cite{suzuki2010_RealTimeMagnetic, kuwahara2012_30kVSpinpolarizedTransmission,vollmer2003}.
+GaAs-based photocathodes are the present state of the art for the spin polarized electron sources because they can provide highly spin polarized electron beams with high efficiency \cite{liu2016_RecordlevelQuantumEfficiency}.
+However, their short operational lifetime poses limits particularly for applications requiring high average current \cite{cardman2018}.
 
 %\subsection{NEA}
-GaAs was first shown to be an attractive electron photoemitter five decades ago via the discovery of negative electron affinity (NEA) activation on \emph{p}-type samples.\cite{scheer1965}
-When the GaAs surface is exposed to cesium vapor (electropositive metal atoms), a strong dipole layer is formed on the surface that lowers the electron affinity, which is defined as the energy difference between the vacuum level and conduction band minimum.\cite{liu2017_ComprehensiveEvaluationFactors} If the GaAs is $p$-doped, the effective electron affinity can become negative because of the downward band bending near the surface. Thus, in NEA conditions, electrons that have relaxed to the bottom of the conduction band after photoexcitation can still escape into vacuum when they reach the vacuum interface. The combination of NEA and other characteristics of GaAs-based photocathodes, such as high electron mobility, results in a high quantum efficiency (QE) at the band gap photon energy of about 1.4 eV.\cite{pierce1976} Additionally, it was demonstrated that the introduction of an oxidant, such as oxygen or NF$_3$, during cesiation can yield an even stronger dipole moment layer and achieve larger NEA and hence larger QE.\cite{su1983,ciccacci1991_ComparativeStudyPreparation}
+GaAs was first shown to be an attractive electron photoemitter five decades ago via the discovery of negative electron affinity (NEA) activation on \emph{p}-type samples \cite{scheer1965}.
+When the GaAs surface is exposed to cesium vapor (electropositive metal atoms), a strong dipole layer is formed on the surface that lowers the electron affinity, which is defined as the energy difference between the vacuum level and conduction band minimum \cite{liu2017_ComprehensiveEvaluationFactors}. If the GaAs is $p$-doped, the effective electron affinity can become negative because of the downward band bending near the surface. Thus, in NEA conditions, electrons that have relaxed to the bottom of the conduction band after photoexcitation can still escape into vacuum when they reach the vacuum interface. The combination of NEA and other characteristics of GaAs-based photocathodes, such as high electron mobility, results in a high quantum efficiency (QE) at the band gap photon energy of about 1.4 eV \cite{pierce1976}. Additionally, it was demonstrated that the introduction of an oxidant, such as oxygen or NF$_3$, during cesiation can yield an even stronger dipole moment layer and achieve larger NEA and hence larger QE \cite{su1983,ciccacci1991_ComparativeStudyPreparation}.
 
 
 
 %\subsection{spin}
-Spin polarized electron photoemission from GaAs is achieved by exploiting the quantum mechanical selection rule that conserves the total angular momentum during photoexcitation with circularly polarized light.\cite{pierce1976} Since electrons need to be excited only from the top of the valence band for a high spin polarization, NEA is required.
+Spin polarized electron photoemission from GaAs is achieved by exploiting the quantum mechanical selection rule that conserves the total angular momentum during photoexcitation with circularly polarized light \cite{pierce1976}. Since electrons need to be excited only from the top of the valence band for a high spin polarization, NEA is required.
 %that has $\pm \hbar$ spin angular momentum, one can induce spin asymmetry among the excited electrons.
 Due to the degenerate light-hole and heavy-hole band states in the P$_{3/2}$ valence band, the theoretical limit of spin polarization of NEA bulk GaAs is 50\%.
-Additionally, various spin relaxation mechanisms limit spin polarization from bulk GaAs to $\sim$ 35 \% at room temperature.\cite{liu2017_ComprehensiveEvaluationFactors} A number of approaches have been proposed to overcome this limit,\cite{clayburn2013,mccarter2014_MeasurementElectronBeam} where exerting lattice strain on GaAs aimed at breaking the valence band degeneracy has been the most successful.\cite{maruyama1992_ElectronspinPolarizationPhotoemission} This method exhibits a high spin polarization of 90\%, but suffers from significantly decreased QE of 0.07\%. In an extension of this approach, GaAs/GaAsP multi-layer superlattices structures with a distributed Bragg reflector were shown to improve the QE up to 6.4\% with a spin polarization of 84\%.\cite{liu2016_RecordlevelQuantumEfficiency}
+Additionally, various spin relaxation mechanisms limit spin polarization from bulk GaAs to $\sim$ 35 \% at room temperature \cite{liu2017_ComprehensiveEvaluationFactors}. A number of approaches have been proposed to overcome this limit \cite{clayburn2013,mccarter2014_MeasurementElectronBeam}. where exerting lattice strain on GaAs aimed at breaking the valence band degeneracy has been the most successful \cite{maruyama1992_ElectronspinPolarizationPhotoemission}. This method exhibits a high spin polarization of 90\% but suffers from significantly decreased QE of 0.07\%. In an extension of this approach, GaAs/GaAsP multi-layer superlattices structures with a distributed Bragg reflector were shown to improve the QE up to 6.4\% with a spin polarization of 84\% \cite{liu2016_RecordlevelQuantumEfficiency}.
 %Recently, nanowire array structure on GaAs also showed a factor of $\sim$2 enhancement in QE exploiting the Mie resonance effect.\cite{Peng2018}
 
 
 %\subsection{Vac sensitivity \& other coatings}
-NEA surfaces of GaAs suffer from extreme vacuum sensitivity because traditional activation layer materials such as Cs-O$_2$ and Cs-NF$_3$ form about a monolayer that is weakly bound to the surface and is chemically reactive.\cite{kuriki2011_DarklifetimeDegradationGaAs,chanlek2014_DegradationQuantumEfficiency}
+NEA surfaces of GaAs suffer from extreme vacuum sensitivity because traditional activation layer materials such as Cs-O$_2$ and Cs-NF$_3$ form about a monolayer that is weakly bound to the surface and is chemically reactive \cite{kuriki2011_DarklifetimeDegradationGaAs,chanlek2014_DegradationQuantumEfficiency}.
 % degradation mechanisms?
- Enhancement of activation layer chemical stability has been shown by using two alkali species, Cs and Li, during activation.\cite{mulhollan2008_EnhancedChemicalImmunity,sun2009_SurfaceActivationLayer,kurichiyanil2019test} 
+ Enhancement of activation layer chemical stability has been shown by using two alkali species, Cs and Li, during activation \cite{mulhollan2008_EnhancedChemicalImmunity,sun2009_SurfaceActivationLayer,kurichiyanil2019test}. 
 While the chemical reactivity is responsible for QE degradation when no photoemission is occurring (dark lifetime), the ion back-bombardment effect also limits the lifetime of the GaAs-based photocathodes during beam extraction.
 %Counteracting this mechanism has been possible to some extent by using biased anodes and extracting electrons from a cathode area far from the gun electrostatic center. 
-Deflecting the electron beam near the emission site was proposed to counteract this mechanism and showed an improvement in lifetime of both GaAs and alkali antimonide photocathodes.
-\cite{grames2011_ChargeFluenceLifetime,mammei2013_ChargeLifetimeMeasurements,rahman2019_IncreasingChargeLifetime,cultrera2011_PhotocathodeBehaviorHigh} 
+Deflecting the electron beam near the emission site was proposed to counteract this mechanism and showed an improvement in lifetime of both GaAs and alkali antimonide photocathodes 
+\cite{grames2011_ChargeFluenceLifetime,mammei2013_ChargeLifetimeMeasurements,rahman2019_IncreasingChargeLifetime,cultrera2011_PhotocathodeBehaviorHigh}.
 
-Although $n$-type Cs$_3$Sb and CsI were demonstrated to be alternative activation materials at the time of the discovery of NEA activation,\cite{sonnenberg1969, sonnenberg1969Cs,hagino1969,zhao1993,guo1996} they have generally been avoided in the photocathode community because the semiconductor activation layer is thicker, and can potentially decrease spin polarization.
-Recent studies reported successful NEA activation on bulk GaAs using Cs$_2$Te,\cite{sugiyama2011_StudyElectronAffinity,uchida2014_STUDYROBUSTNESSNEAGAAS,kuriki2015_GaAsPhotocathodeActivation} a semiconductor known for being a robust solar blind photocathode material itself.\cite{michelato2008_Cs2TePHOTOCATHODESROBUSTNESS} It was demonstrated that a Cs$_2$Te activation layer can improve the charge extraction lifetime by a factor of 5 without negatively affecting the spin polarization.\cite{bae2018_RuggedSpinpolarizedElectron} Yet, all experiments were done with bulk GaAs, which only has up to 40\% spin polarization at room temperature. Activation of high spin polarization photocathodes (like GaAs/GaAsP superlattices) and its effect on the degree of polarization have not been demonstrated.
+Although $n$-type Cs$_3$Sb and CsI were demonstrated to be alternative activation materials at the time of the discovery of NEA activation \cite{sonnenberg1969, sonnenberg1969Cs,hagino1969,zhao1993,guo1996}, they have generally been avoided in the photocathode community because the semiconductor activation layer is thicker, and can potentially decrease spin polarization.
+Recent studies reported successful NEA activation on bulk GaAs using Cs$_2$Te \cite{sugiyama2011_StudyElectronAffinity,uchida2014_STUDYROBUSTNESSNEAGAAS,kuriki2015_GaAsPhotocathodeActivation}, a semiconductor known for being a robust solar blind photocathode material itself \cite{michelato2008_Cs2TePHOTOCATHODESROBUSTNESS}. It was demonstrated that a Cs$_2$Te activation layer can improve the charge extraction lifetime by a factor of 5 without negatively affecting the spin polarization \cite{bae2018_RuggedSpinpolarizedElectron}. Yet, all experiments were done with bulk GaAs, which only has up to 40\% spin polarization at room temperature. Activation of high spin polarization photocathodes (like GaAs/GaAsP superlattices) and its effect on the degree of polarization have not been demonstrated.
 
 %\textcolor{red}{However, Sugiyama \emph{et al.} has shown that the lifetime at 780 nm can be drastically different from that at 532 m.}
 
@@ -55,7 +59,7 @@ Then, a GaAs/GaAsP superlattice sample was activated with one of the methods (co
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/band2.pdf}
+	\includegraphics*[width=270pt]{figs/CsSbO/band2.pdf}
 	\caption{Energy band diagram of GaAs activated with Cs$_3$Sb coating. An alternative activation layer needs to satisfy two conditions to achieve NEA. (i) The energy difference between the vacuum level $E_{vac}$ and Fermi level $E_F$ should be smaller than the GaAs band gap. (ii) The band gap of activation layer should be larger than the GaAs band gap so that the activation layer is transparent for photon energy near the GaAs band gap.}
 	\label{fig_band}
 	  % \vspace*{-\baselineskip}
@@ -63,8 +67,8 @@ Then, a GaAs/GaAsP superlattice sample was activated with one of the methods (co
 
 \section{Growth}
 
-Samples of $10\times10$ mm$^2$ dimension are prepared by cutting highly \emph{p}-doped (Zn $5\times 10^{18} \textrm{ cm}^{-3}$) GaAs (100) wafers in air with a diamond scriber. Samples are then solvent cleaned with isopropanol and rinsed in de-ionized water. Wet-etching was later performed for each sample with 1\% HF for 30 s to remove the native oxide layer with minimal surface damage.\cite{reiVilar2005,feng2019_etching} Samples were finally rinsed again in de-ionized water and then moved into vacuum. 
-The growth chamber has Cs and Sb single filament effusion cells\cite{cultrera2014_alkali} installed under ultra-high vacuum (UHV) of $\sim 10^{-9}$ Torr. Shutters in front of each effusion cell act as on/off switches of the flux to the sample surface. A leak valve connected to an oxygen bottle was used to leak oxygen into the chamber during the growths. Total pressure is monitored with a cold cathode gauge. GaAs samples were heat cleaned at $\sim 500$ $^\circ$C for about 12 hours. Then temperature was lowered to about 130 $^\circ$C for the growth.
+Samples of $10\times10$ mm$^2$ dimension are prepared by cutting highly \emph{p}-doped (Zn $5\times 10^{18} \textrm{ cm}^{-3}$) GaAs (100) wafers in air with a diamond scriber. Samples are then solvent cleaned with isopropanol and rinsed in de-ionized water. Wet-etching was later performed for each sample with 1\% HF for 30 s to remove the native oxide layer with minimal surface damage \cite{reiVilar2005,feng2019_etching}. Samples were finally rinsed again in de-ionized water and then moved into vacuum. 
+The growth chamber has Cs and Sb single filament effusion cells \cite{cultrera2014_alkali} installed under ultra-high vacuum (UHV) of $\sim 10^{-9}$ Torr. Shutters in front of each effusion cell act as on/off switches of the flux to the sample surface. A leak valve connected to an oxygen bottle was used to leak oxygen into the chamber during the growths. Total pressure is monitored with a cold cathode gauge. GaAs samples were heat cleaned at $\sim 500$ $^\circ$C for about 12 hours. Then temperature was lowered to about 130 $^\circ$C for the growth.
 %, which is a typical growth temperature for Cs$_3$Sb photocathodes.%
 The same heat cleaning procedure was employed to prepare the reference sample, which was later activated with Cs and O$_2$ at room temperature.
 
@@ -82,14 +86,14 @@ The same heat cleaning procedure was employed to prepare the reference sample, w
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/growths_all.eps}
+	\includegraphics*[width=300pt]{figs/CsSbO/growths_all.eps}
 	\caption{Quantum Efficiency of GaAs photocathodes during the thin film growths. The initial QE at 780 nm is not zero due to residual cesium vapor in the growth chamber. The Cs shutter and Sb shutter are opened at (i) and (ii), respectively. (a) Oxygen was not used during the growth (method (a) and (b) in the text). (b) Oxygen was leaked before deposition of Sb (method(c)). (c) Cs, Sb, and O$_2$ are codeposited during the growths (method (d)). Oxygen leak valve was closed at (iii).}
 	\label{fig_growth}
 	% \vspace*{-\baselineskip}
 \end{figure}
 
 
-A 780 nm diode laser ($\sim 10 \mu$W) in continuous wave mode was used to excite the samples\cite{feng2019_activation} that were biased at -18 V during the growth. This wavelength is at the NEA GaAs threshold. The drain current was measured via a lock-in amplifier locked to the frequency of an optical chopper used to modulate the laser light.
+A 780 nm diode laser ($\sim 10 \mu$W) in continuous wave mode was used to excite the samples \cite{feng2019_activation} that were biased at -18 V during the growth. This wavelength is at the NEA GaAs threshold. The drain current was measured via a lock-in amplifier locked to the frequency of an optical chopper used to modulate the laser light.
 Samples were grown with five different methods:
 \begin{enumerate}[label=(\alph*)]
 	\item Cs and Sb was codeposited on GaAs without oxygen exposure. This method corresponds to Cs-Sb (purple lines) in Fig.~\ref{fig_sr}-\ref{fig_polarization}.
@@ -101,11 +105,11 @@ Samples were grown with five different methods:
 Figure \ref{fig_growth_schematics} illustrates the layer order for samples grown with Sb.
 
 In Fig.~\ref{fig_growth}, the QEs estimated during the different growth procedures of Cs-Sb on bulk GaAs with and without  the oxygen exposure are plotted.  
-At the beginning of the growth procedures, we found the samples already photoemitting at 780 nm. We attribute this to the Cs vapors already present in the UHV chamber from previous growth experiments. As the Cs furnace temperature is raised with the shutter closed, the QE increases further, likely because Cs vapors can make it through the gap between the shutter and furnace. In Fig.~\ref{fig_growth}, (i) indicates the opening of the Cs shutter and (ii) is when the Sb shutter is opened. For all methods, the Sb shutter was left opened for 1000 seconds to deposit 2.5 \AA\ with a flux of $8.3 \times 10^{11}$ atoms/cm$^2$/s, estimated from frequency shifts of a quartz crystal microbalance. Assuming Cs$_3$Sb single crystal structure, this amount of Sb corresponds to the total film thickness of 17\AA.\cite{hagino1966} The Cs shutter was left open during the Sb layer deposition and the final cooling of the sample down to 50$^\circ$C. The photocurrent showed a sudden increase as the Cs shutter is opened and rapid decrease when Sb shutter is opened. 
+At the beginning of the growth procedures, we found the samples already photoemitting at 780 nm. We attribute this to the Cs vapors already present in the UHV chamber from previous growth experiments. As the Cs furnace temperature is raised with the shutter closed, the QE increases further, likely because Cs vapors can make it through the gap between the shutter and furnace. In Fig.~\ref{fig_growth}, (i) indicates the opening of the Cs shutter and (ii) is when the Sb shutter is opened. For all methods, the Sb shutter was left opened for 1000 seconds to deposit 0.25 nm with a flux of $8.3 \times 10^{11}$ atoms/cm$^2$/s, estimated from frequency shifts of a quartz crystal microbalance. Assuming Cs$_3$Sb single crystal structure, this amount of Sb corresponds to the total film thickness of 1.7 nm \cite{hagino1966}. The Cs shutter was left open during the Sb layer deposition and the final cooling of the sample down to 50$^\circ$C. The photocurrent showed a sudden increase as the Cs shutter is opened and rapid decrease when Sb shutter is opened. 
 For the samples of Fig. \ref{fig_growth} (a), no oxygen was leaked into the growth chamber (methods (a) and (b)). Oxygen was supplied with a partial pressure of $\sim 5 \times 10^{-9}$ Torr  in Fig.~\ref{fig_growth} (b) and (c); the leak valve was closed just before opening the Sb shutter in (b) (method (c)) and during cooling down (iii) in (c) (method (d)). %
 %During the growth of samples using the methods (c) and (d), oxygen was supplied into the growth chamber with a partial pressure of $\sim 5 \times 10^{-9}$ Torr. In Fig.~\ref{fig_growth} (b) and (c), the leak valve was closed just before opening the Sb shutter and after closing the Sb shutter (iii) for method (c) and 5, respectively.
 The sample activated with method (b) was moved under UHV into another chamber (with a base pressure of $\sim 5 \times 10^{-11}$ Torr) to be further activated by exposing simultaneously to Cs and O$_2$ at room temperature. For the superlattice sample, Cs, Sb, and O$_2$ are codeposited for activation as in Fig.~\ref{fig_growth} (c).
-Half the amount of Sb was deposited compared to the bulk samples (1.25 \AA\ Sb and 8.5 \AA\ total thickness) to maintain the spin polarization.\cite{cultrera2020_LongLifetimePolarized}
+Half the amount of Sb was deposited compared to the bulk samples (0.125 nm Sb and 0.85 nm total thickness) to maintain the spin polarization \cite{cultrera2020_LongLifetimePolarized}.
 
 \section{Results}
 
@@ -114,7 +118,7 @@ Half the amount of Sb was deposited compared to the bulk samples (1.25 \AA\ Sb a
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/sr.eps}
+	\includegraphics*[width=300pt]{figs/CsSbO/sr.eps}
 	\caption{Spectral response of GaAs samples activated by Cs, Sb, and O$_2$ using different methods. All samples indicate NEA activation on the surface by photoemission at GaAs band gap energy (1.42 eV).
 	}
 	\label{fig_sr}
@@ -148,7 +152,7 @@ Photoemission at the GaAs band gap photon energy (1.42 eV) confirms NEA achievem
 
 
 %Assuming ion-back bombardment is the main mechanism that lowers QE, one can calculate %
-The robustness of the activating layers was compared by measuring the QE degradation over time. The lifetime of a photocathode is defined as the time QE takes to drop by a factor of $e$, the base of the natural logarithm.\cite{bae2018_RuggedSpinpolarizedElectron,grames2011_ChargeFluenceLifetime} 
+The robustness of the activating layers was compared by measuring the QE degradation over time. The lifetime of a photocathode is defined as the time QE takes to drop by a factor of $e$, the base of the natural logarithm \cite{bae2018_RuggedSpinpolarizedElectron,grames2011_ChargeFluenceLifetime}.
 Photocurrent was measured continuously in the range of 1 - 100 nA with a 505 nm diode laser ($\sim 20 \: \mu$W) in Fig.~\ref{fig_lifetime}. The lifetimes extracted from these measurements represent a convolution of the QE degradation from chemical poisoning (known as dark lifetime) and ion back-bombardment (known as charge lifetime).
 %All measurements were done with samples biased at -18 V.
 %Under such experimental conditions, photoemitted electrons have a negligible hydrogen impact ionization cross-section,\cite{Grames2011} so we expect that chemical poisoning would be the dominant contribution over ion back-bombardment.
@@ -161,14 +165,14 @@ One order of magnitude increase in lifetime ($\sim$ 300 h) was observed when the
 %Among the samples activated with oxygen, the longest lifetime (0.14 C) was measured for the sample that was exposed to oxygen during the deposition of Cs and Sb, corresponding to a factor of $\sim$20 improvement from conventional Cs-O$_2$ activation.
 Table \ref{table2} reports estimated lifetimes at 780 nm.
 Spectral response at 780 nm was measured before and after the QE degradation measurement in Fig.~\ref{fig_lifetime}, and the lifetime is calculated assuming an exponential decrease as a function of time between the two measured points. The Cs-Sb-O$_2$ activation showed the greatest improvement from Cs-O$_2$ activation by a factor of 6.8.
-As opposed to Cs$_2$Te activation, which showed a rapid increase of the work function as a function of time,\cite{sugiyama2011_StudyElectronAffinity} the Cs-Sb-O$_2$ layer achieves significant enhancement in lifetime near the photoemission threshold.
+As opposed to Cs$_2$Te activation, which showed a rapid increase of the work function as a function of time \cite{sugiyama2011_StudyElectronAffinity}, the Cs-Sb-O$_2$ layer achieves significant enhancement in lifetime near the photoemission threshold.
 
 
 
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/lifetime.eps}
+	\includegraphics*[width=300pt]{figs/CsSbO/lifetime.eps}
 	\caption{Quantum Efficiency degradation as a function of time. 505 nm laser was used to illuminate the sample. The number next to each curve is the lifetime calculated by fitting each curve to an exponential function. Improvement factors from the standard Cs-O$_2$ activation are in the parentheses.}
 	\label{fig_lifetime}
 	% \vspace*{-\baselineskip}
@@ -209,7 +213,7 @@ As opposed to Cs$_2$Te activation, which showed a rapid increase of the work fun
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/pol.eps}
+	\includegraphics*[width=300pt]{figs/CsSbO/pol.eps}
 	\caption{Spin polarization of photoemitted electron from GaAs activated by Cs, Sb, and O$_2$.}
 	\label{fig_polarization}
 	% \vspace*{-\baselineskip}
@@ -219,13 +223,13 @@ Spin polarization of photoemitted electrons was measured by the Mott polarimeter
 %Fig.~\ref{fig_polarization}.  
 Monochromatic light was used to produce circularly polarized light directed at normal incidence to the sample surface.
 % Helicity switching
-Longitudinally spin-polarized electrons were bent $90^\circ$ by electrostatic lenses and Mott scattered with 20 keV at a tungsten target, which was calibrated to have a Sherman function of 0.18.\cite{Mulhollan_SLAC,bae2018_RuggedSpinpolarizedElectron} 
+Longitudinally spin-polarized electrons were bent $90^\circ$ by electrostatic lenses and Mott scattered with 20 keV at a tungsten target, which was calibrated to have a Sherman function of 0.18 \cite{Mulhollan_SLAC,bae2018_RuggedSpinpolarizedElectron}. 
 %As shown in Fig.~\ref{fig_polarization}, all samples showed similar spin polarization in the spectral region between 600 and 850 nm.
 %At 780 nm, the measured values agreed within two standard deviations from the averaged value.
 Photoelectron spin polarization was measured as a function of wavelength for each sample (Fig.~\ref{fig_polarization}). The maximum spin polarization varied up to 5\%, which corresponds to about 3 standard deviations.
-%At lower wavelengths, Sb deposited samples tend to have higher spin polarization because of smaller negative electron affinities. Small negative electron affinity can prevent escape of electrons that are excited from below of the top of the valence band which lowers the total spin polarization.\cite{Pierce1976}
+%At lower wavelengths, Sb deposited samples tend to have higher spin polarization because of smaller negative electron affinities. Small negative electron affinity can prevent escape of electrons that are excited from below of the top of the valence band which lowers the total spin polarization.\cite{pierce1976}
  %The polarization of the best performing samples, activated with Cs-Sb-O$_2$ codeposition (method (d)), was also studied as a function of layer thickness in Ref. \cite{LucaPaper}.
-The detailed study\cite{cultrera2020_LongLifetimePolarized} on the samples activated with the Cs-Sb-O$_2$ method reveals a significant spin depolarization as thickness of the Sb layer grows.
+The detailed study \cite{cultrera2020_LongLifetimePolarized} on the samples activated with the Cs-Sb-O$_2$ method reveals a significant spin depolarization as thickness of the Sb layer grows.
  %Table ~\ref{table} reports the estimated thicknesses for different stable compounds of Cs-Sb-O based on the amount of Sb deposited during the 1000 s of exposure. For all the different materials the estimated thickness is not larger than few nm.
  %Based on the assumption that the kinetic energy of the electrons injected from GaAs into a Cs$_3$Sb activating layer is at least equal to the cesium antimonide electron affinity (0.4 eV), it become possible to estimate the $1/e$ spin relaxation time to be on the range of 20 fs (I calculated 8.5 fs!!!). 
  
@@ -237,14 +241,14 @@ The detailed study\cite{cultrera2020_LongLifetimePolarized} on the samples activ
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/sl.eps}
+	\includegraphics*[width=300pt]{figs/CsSbO/sl.eps}
 	\caption{Spin polarization, quantum efficiency, and lifetime measurement of GaAs/GaAsP superlattice sample activated by codeposition of Cs-Sb-O$_2$ and standard Cs-O$_2$. The numbers in the parentheses are lifetime improvement factors from the standard Cs-O$_2$ activation.}
 	\label{fig_superlattice}
 	% \vspace*{-\baselineskip}
 	
 \end{figure}
 
-Since the Cs-Sb-O$_2$ codeposited sample showed both the highest QE at the photoemission threshold among Sb deposited samples and  a significantly improved lifetime, we chose the codeposition method to activate a GaAs/GaAsP superlattice sample\cite{maruyama2004} (Fig.~\ref{fig_superlattice}). Compared to the bulk samples, a half the amount of Sb is deposited (1.25 \AA) to minimize depolarization at the activation layer.\cite{cultrera2020_LongLifetimePolarized} Both samples showed $\sim$ 90 \% maximum spin polarization with agreement within one standard deviation. The QE at 780 nm was a factor of 3 smaller for the semiconductor activated sample. QE was continuously measured in Fig.~\ref{fig_superlattice} (b) for lifetime estimation at 780 nm, the wavelength commonly used for a highly spin polarized photoemission.
+Since the Cs-Sb-O$_2$ codeposited sample showed both the highest QE at the photoemission threshold among Sb deposited samples and a significantly improved lifetime, we chose the codeposition method to activate a GaAs/GaAsP superlattice sample \cite{maruyama2004} (Fig.~\ref{fig_superlattice}). Compared to the bulk samples, a half the amount of Sb is deposited (0.125 nm) to minimize depolarization at the activation layer \cite{cultrera2020_LongLifetimePolarized}. Both samples showed $\sim$ 90 \% maximum spin polarization with agreement within one standard deviation. The QE at 780 nm was a factor of 3 smaller for the semiconductor activated sample. QE was continuously measured in Fig.~\ref{fig_superlattice} (b) for lifetime estimation at 780 nm, the wavelength commonly used for a highly spin polarized photoemission.
 The lifetime showed a factor of 7 improvement, which is similar to the bulk results in Table.~\ref{table2} that were activated with twice the amount of Sb.
 
 
@@ -260,7 +264,7 @@ The lifetime showed a factor of 7 improvement, which is similar to the bulk resu
 The sample prepared with method (c) (where the Cs-O$_2$ is deposited on the surface of GaAs under the Cs-Sb layer) has a higher QE than the sample prepared with method (b), where the Cs-O$_2$ is deposited above the Cs-Sb layer. This suggests that despite the small thickness of the activating layers, segregation can take place such that the intermediate Cs-O$_2$ layer retains the strong electric dipole enhancing the transmission from GaAs into the Cs-Sb layer.
 %similarly to the case to achieve higher QEs, but at the same time a more robust layer is obtained when Sb interacts with O$_2$ after and in particular during the Cs-Sb deposition.
 Additionally, the QE near threshold of the sample exposed to Cs-O$_2$ after depositing Cs-Sb is larger than the one activated only with Cs-Sb.
-Studies on the nature of the GaAs/Cs-O activation layer indicate that the dipole layer consists of a Cs$^+$-O$^{2-}$-Cs$^+$ sandwich on a O-GaAs layer, and the strong double dipole layer results in a higher QE compared to Cs-only activation.\cite{su1983} On the other hand, studies on the oxidation of alkali antimonide photocathodes show that, during oxidation, the films segregate in a alkali-oxide rich surface layer on top of the alkali antimonide layer. \cite{soriano1993} In particular, at low oxygen exposures (less than 10 L for Cs$_{2.5}$K$_{0.5}$Sb), \cite{soriano1993} the top surface is mainly composed of a Cs suboxide (Cs$_{11}$O$_3$) \cite{galdiNAPAC} that is known to promote photoemission, in particular at long wavelengths.\cite{bates1981}
+Studies on the nature of the GaAs/Cs-O activation layer indicate that the dipole layer consists of a Cs$^+$-O$^{2-}$-Cs$^+$ sandwich on a O-GaAs layer, and the strong double dipole layer results in a higher QE compared to Cs-only activation \cite{su1983}. On the other hand, studies on the oxidation of alkali antimonide photocathodes show that, during oxidation, the films segregate in a alkali-oxide rich surface layer on top of the alkali antimonide layer \cite{soriano1993}. In particular, at low oxygen exposures (less than 10 L for Cs$_{2.5}$K$_{0.5}$Sb) \cite{soriano1993}, the top surface is mainly composed of a Cs suboxide (Cs$_{11}$O$_3$) \cite{galdiNAPAC} that is known to promote photoemission, in particular at long wavelengths \cite{bates1981}.
 
 The above discussion suggests that the sample activated with Cs-Sb-O$_2$ should indeed have the the largest QE among the alternative methods. In this case, the continuous oxygen exposure can result in the formation of a strong electric dipole at both the interface with GaAs and at the surface of Cs-Sb that can favor both electron tunneling from GaAs to Cs-Sb and electron emission from Cs-Sb to vacuum. The oxygen dosed on the samples during codeposition can be estimated to be of the order of 50 L - 75 L; since Cs is provided during the oxygen exposure and after the closure of the oxygen leak valve, it is reasonable to expect the formation of Cs-rich suboxides on the sample surface.
 
@@ -273,33 +277,33 @@ The above discussion suggests that the sample activated with Cs-Sb-O$_2$ should 
 \begin{figure}
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	\includegraphics*[width=230pt]{figs/CsSbO/pb.eps}
-	\caption{Numerical simulation of quantum efficiency under various potential barrier shapes. (a) Potential barriers were constructed for 17\AA\ thick semiconductor activation layer to calculate transmission probabilities. Red, yellow, blue regions correspond to GaAs, activation layer, and vacuum, respectively. An enlarged view of the barrier near the surface is shown in the inset. (b) Width and EA are varied to compute threshold QE. The black mark corresponds to the standard Cs-O$_2$ activation sample. Potential barrier parameters in Ref.~\cite{vergara1999} were used. White contour lines are sets of parameters that reproduce experimentally measured QEs.}
+	\includegraphics*[width=250pt]{figs/CsSbO/pb.eps}
+	\caption{Numerical simulation of quantum efficiency under various potential barrier shapes. (a) Potential barriers were constructed for 1.7 nm thick semiconductor activation layer to calculate transmission probabilities. Red, yellow, blue regions correspond to GaAs, activation layer, and vacuum, respectively. An enlarged view of the barrier near the surface is shown in the inset. (b) Width and EA are varied to compute threshold QE. The black mark corresponds to the standard Cs-O$_2$ activation sample. Potential barrier parameters in Ref.~\cite{vergara1999} were used. White contour lines are sets of parameters that reproduce experimentally measured QEs.}
 	\label{fig_potentialBarrier}
 	% \vspace*{-\baselineskip}
 	
 \end{figure}
 
-Photoexcited electrons experience a potential barrier at the GaAs surface in the process of emission into the vacuum. Although various models of the potential barrier were proposed, fundamental understanding of the nature of the barrier is lacking.\cite{karkare2013, jin2014} Rectangular,\cite{fisher1972} triangular,\cite{vergara1999} and double triangular\cite{jin2014} shapes have been proposed in previous studies to reproduce various experimental observations. In Fig.~\ref{fig_potentialBarrier}, a simple potential barrier was constructed to numerically investigate how different methods of oxygen exposure during Cs-Sb growths can affect the shape of the potential barrier and QE as a result. The transmission probabilities and corresponding quantum efficiencies of various modeled potential barriers were calculated using the propagation matrix approach.\cite{karkare2013,levi2006applied,gilmore2004elementary}
+Photoexcited electrons experience a potential barrier at the GaAs surface in the process of emission into the vacuum. Although various models of the potential barrier were proposed, fundamental understanding of the nature of the barrier is lacking \cite{karkare2013, jin2014}. Rectangular \cite{fisher1972}, triangular \cite{vergara1999}, and double triangular \cite{jin2014} shapes have been proposed in previous studies to reproduce various experimental observations. In Fig.~\ref{fig_potentialBarrier}, a simple potential barrier was constructed to numerically investigate how different methods of oxygen exposure during Cs-Sb growths can affect the shape of the potential barrier and QE as a result. The transmission probabilities and corresponding quantum efficiencies of various modeled potential barriers were calculated using the propagation matrix approach \cite{karkare2013,levi2006applied,gilmore2004elementary}.
 
-In the bulk of GaAs, we implement quadratic band-bending near the surface with a 100 \AA\ band bending region and 0.4 eV band bending magnitude.\cite{karkare2013} A simple triangular potential barrier was placed at the interface between GaAs and the activation layer. The height of the triangle was fixed at 4 eV above the conduction band minimum (CBM) of GaAs\cite{vergara1999} while the width was varied throughout the simulations. The variation of the width can be interpreted as a change in dipole moment strength at the interface.
-The bottom of the potential well between the triangular barrier and the vacuum interface was fixed at 0.35 eV below the conduction band minimum.\cite{uebbing1970, jin2014, bakin2015}
+In the bulk of GaAs, we implement quadratic band-bending near the surface with a 10 nm band bending region and 0.4 eV band bending magnitude \cite{karkare2013}. A simple triangular potential barrier was placed at the interface between GaAs and the activation layer. The height of the triangle was fixed at 4 eV above the conduction band minimum (CBM) of GaAs \cite{vergara1999} while the width was varied throughout the simulations. The variation of the width can be interpreted as a change in dipole moment strength at the interface.
+The bottom of the potential well between the triangular barrier and the vacuum interface was fixed at 0.35 eV below the conduction band minimum \cite{uebbing1970, jin2014, bakin2015}.
 %The energy level of the well between the triangular potential barrier and the vacuum interface was fixed at 0.35 eV below the conduction band minimum.\cite{Uebbing1970, Jin2014, Bakin2015}
 %so that the energy level aligns with the vacuum level when NEA is 0.35 eV for Cs-O$_2$ activated sample 
-The vacuum interface is positioned at 17 \AA\ from the GaAs surface, which is the estimated thickness of the activation layer.
+The vacuum interface is positioned at 1.7 nm from the GaAs surface, which is the estimated thickness of the activation layer.
 
 %The transmission probabilities ($P$) of constructed potential barriers are calculated by the propagation matrix approach\cite{Karkare2013,levi2006applied,gilmore2004elementary} and used to compute QE numerically with the following equation:\cite{3step}
-Based on the transmission probabilities ($P$) calculated by the propagation matrix approach,\cite{levi2006applied,gilmore2004elementary} corresponding quantum efficiencies (QE) are computed numerically with the following equation:
+Based on the transmission probabilities ($P$) calculated by the propagation matrix approach \cite{levi2006applied,gilmore2004elementary}, corresponding quantum efficiencies (QE) are computed numerically with the following equation:
 \begin{equation}
 	\textrm{QE} = (1-R) F\, \frac{\int^\infty_0 dE\, f(E) \int^1_0 d(\cos\theta) P(E \cos^2 \theta)}{\int^\infty_0 dE\, f(E) \int^1_{-1} d(\cos\theta)}.
 \end{equation}
-Here, $R$ is the optical reflectance of GaAs, $F$ is a scattering contribution (from holes, impurities, and phonons)\cite{karkare2013} which can be approximated to be independent of energy near the photoemission threshold,\cite{dowell2009_QuantumEfficiencyThermal} $\theta$ is the angle between the electron velocity and the surface normal, and $f(E)$ is a Fermi-Dirac distribution of photoexcited electrons:
+Here, $R$ is the optical reflectance of GaAs, $F$ is a scattering contribution (from holes, impurities, and phonons) \cite{karkare2013} which can be approximated to be independent of energy near the photoemission threshold \cite{dowell2009_QuantumEfficiencyThermal}, $\theta$ is the angle between the electron velocity and the surface normal, and $f(E)$ is a Fermi-Dirac distribution of photoexcited electrons:
 \begin{equation}
 	f(E) = \frac{1}{1+e^{[E-(h\nu -E_g)]/kT}},
 \end{equation}
-where $h\nu$ is the photon energy, $E_g$ is the GaAs band gap, $k$ is the Boltzmann constant, and $T$ is the room temperature. Additional scatterings at the semiconductor activation layer can be considered to be mostly elastic electron-electron collisions, so they have been ignored\cite{cultrera2020_LongLifetimePolarized}.
+where $h\nu$ is the photon energy, $E_g$ is the GaAs band gap, $k$ is the Boltzmann constant, and $T$ is the room temperature. Additional scatterings at the semiconductor activation layer can be considered to be mostly elastic electron-electron collisions, so they have been ignored \cite{cultrera2020_LongLifetimePolarized}.
 
-In Fig.~\ref{fig_potentialBarrier} (b), QEs are calculated for various sets of the triangle width and electron affinity. The photoemission threshold wavelength 870 nm was used, and the scattering term $F$ was set to be 0.21 to match the experimentally measured value of Cs-O$_2$ activated sample to the calculated one. The width of triangular potential barrier of Cs-O$_2$ activation layer is reported to be 1.5 \AA\cite{vergara1999} with 0.35 eV NEA.\cite{jin2014, bakin2015,uebbing1970} The white contour line for each growth method represent the set of parameters that reproduce the experimentally measured QE at 870 nm.
+In Fig.~\ref{fig_potentialBarrier} (b), QEs are calculated for various sets of the triangle width and electron affinity. The photoemission threshold wavelength 870 nm was used, and the scattering term $F$ was set to be 0.21 to match the experimentally measured value of Cs-O$_2$ activated sample to the calculated one. The width of triangular potential barrier of Cs-O$_2$ activation layer is reported to be 0.15 nm \cite{vergara1999} with 0.35 eV NEA \cite{jin2014, bakin2015,uebbing1970}. The white contour line for each growth method represent the set of parameters that reproduce the experimentally measured QE at 870 nm.
 The contour lines suggest that when NEA is greater than 0.1 eV, the efficiency is roughly independent of NEA while the barrier width plays a critical role in determining QE. Considering that a small width represents a strong dipole moment at the surface, activation with oxygen at the interface between bulk GaAs and the activation layer is essential to achieve a high QE.
 Thus, this simple model can explain why samples activated with oxygen before and during the Cs-Sb growth showed greater improvement in QE compared to the sample exposed to oxygen after Sb deposition, which is related to greater NEA at the vacuum interface.
 
@@ -322,5 +326,5 @@ Future work will involve surface characterization of the activation layer to und
 This work was supported by the Department of Energy under Grant No. DE-SC0019122 and National Science Foundation under Grant No. PHY-1549132, the Center for Bright Beams.
 Authors would like to acknowledge Marcy Stutzman, Matt Poelker, Joe Grames, and William DeBenedetti for valuable discussions, help in preparing GaAs samples, and providing GaAs/GaAsP superlattice samples.
 
-\section{Thickness variation}
-See `depolarization section' at overleaf
+%\section{Thickness variation}
+%See `depolarization section' at overleaf
